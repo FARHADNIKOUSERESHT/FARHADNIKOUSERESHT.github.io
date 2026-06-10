@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let i = 0;
         const typeInterval = setInterval(() => {
             if (i < text.length) {
-                typingElement.textContent += text.charAt(i);
+                typingElement.textContent += text.charAt(i);.
                 i++;
             } else {
                 clearInterval(typeInterval);
