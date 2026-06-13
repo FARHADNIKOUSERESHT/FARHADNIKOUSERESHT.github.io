@@ -10,19 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">دکتر فرهاد نیکوسرشت</div>
-            <div class="menu">
-                <button class="menu-btn active" onclick="showSection('about')">درباره من</button>
-                <button class="menu-btn" onclick="showSection('experience')">سوابق علمی</button>
-                <button class="menu-btn" onclick="showSection('publications')">مقالات علمی</button>
-                <button class="menu-btn" onclick="showSection('contact')">ارتباط با من</button>
-            </div>
-        </div>
-    </nav>
-
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
@@ -35,17 +22,23 @@
         </div>
     </section>
 
-    <!-- Sections -->
-    <div id="about" class="content-section active">
-        <div class="container">
+    <!-- Sections with Black Buttons -->
+    <div class="section-wrapper">
+        <button class="section-btn" onclick="toggleSection('about')">
+            <i class="fas fa-user"></i> درباره من
+        </button>
+        <div id="about" class="content-box">
             <h2>درباره من</h2>
             <p>دکتر فرهاد نیکوسرشت. دارای مدرک دکتری تخصصی Ph.D فیزیولوژی ورزشی. استاد دانشگاه. فیزیولوژیست. پژوهشگر فیزیولوژی ورزشی.</p>
             <p>متخصص برنامه‌نویسی تمرین ورزشی و تغذیه ورزشی برای افراد سالم و افراد دارای اختلالات و بیماری‌های خاص. متخصص درمان بیماری کبد چرب غیرالکلی گرید ۱ تا ۳.</p>
         </div>
     </div>
 
-    <div id="experience" class="content-section">
-        <div class="container">
+    <div class="section-wrapper">
+        <button class="section-btn" onclick="toggleSection('experience')">
+            <i class="fas fa-briefcase"></i> سوابق علمی و حرفه‌ای
+        </button>
+        <div id="experience" class="content-box">
             <h2>سوابق علمی و حرفه‌ای</h2>
             <ul>
                 <li><strong>استاد دانشگاه</strong> — تدریس در دانشگاه آزاد اسلامی</li>
@@ -56,8 +49,11 @@
         </div>
     </div>
 
-    <div id="publications" class="content-section">
-        <div class="container">
+    <div class="section-wrapper">
+        <button class="section-btn" onclick="toggleSection('publications')">
+            <i class="fas fa-book"></i> مقالات علمی
+        </button>
+        <div id="publications" class="content-box">
             <h2>مقالات علمی</h2>
             <div class="article-item">
                 <h3>The Effect of Resveratrol with Interval Training On Oxidative Stress Biomarkers and Liver Enzymes in Men with Non-Alcoholic Fatty Liver Disease</h3>
@@ -70,8 +66,11 @@
         </div>
     </div>
 
-    <div id="contact" class="content-section">
-        <div class="container">
+    <div class="section-wrapper">
+        <button class="section-btn" onclick="toggleSection('contact')">
+            <i class="fas fa-envelope"></i> ارتباط با من
+        </button>
+        <div id="contact" class="content-box">
             <h2>ارتباط با من</h2>
             <a href="https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu" target="_blank" class="instagram-btn">
                 <i class="fab fa-instagram"></i> پیام در اینستاگرام
@@ -84,16 +83,15 @@
     </footer>
 
     <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
+        function toggleSection(sectionId) {
+            const allContents = document.querySelectorAll('.content-box');
+            allContents.forEach(box => {
+                if (box.id === sectionId) {
+                    box.style.display = box.style.display === 'block' ? 'none' : 'block';
+                } else {
+                    box.style.display = 'none';
+                }
             });
-            document.getElementById(sectionId).classList.add('active');
-
-            document.querySelectorAll('.menu-btn').forEach(btn => btn.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-
-            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
         }
     </script>
 </body>
