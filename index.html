@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">دکتر فرهاد نیکوسرشت</div>
+            <div class="menu">
+                <a href="#" onclick="showSection('about')">درباره من</a>
+                <a href="#" onclick="showSection('experience')">سوابق علمی</a>
+                <a href="#" onclick="showSection('publications')">مقالات علمی</a>
+                <a href="#" onclick="showSection('contact')">ارتباط با من</a>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="جستجو در سایت..." onkeyup="searchSite()">
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
@@ -22,60 +38,70 @@
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section">
+    <!-- Content Sections -->
+    <div id="about" class="content-section active">
         <div class="container">
             <h2>درباره من</h2>
             <p>دکتر فرهاد نیکوسرشت. دارای مدرک دکتری تخصصی Ph.D فیزیولوژی ورزشی. استاد دانشگاه. فیزیولوژیست. پژوهشگر فیزیولوژی ورزشی.</p>
             <p>متخصص برنامه‌نویسی تمرین ورزشی و تغذیه ورزشی برای افراد سالم و افراد دارای اختلالات و بیماری‌های خاص. متخصص درمان بیماری کبد چرب غیرالکلی گرید ۱ تا ۳.</p>
         </div>
-    </section>
+    </div>
 
-    <!-- Experience -->
-    <section id="experience" class="section bg-dark">
+    <div id="experience" class="content-section">
         <div class="container">
             <h2>سوابق علمی و حرفه‌ای</h2>
-            <ul class="exp-list">
+            <ul>
                 <li><strong>استاد دانشگاه</strong> — تدریس در دانشگاه آزاد اسلامی</li>
                 <li><strong>مربی ورزشی</strong> — از سال ۱۳۹۹ تا کنون</li>
-                <li><strong>مدرس دوره‌های مربیگری و دانش‌افزایی بین‌المللی</strong> — از سال ۱۳۹۹ تا کنون</li>
+                <li><strong>مدرس دوره‌های مربیگری بین‌المللی</strong> — از سال ۱۳۹۹ تا کنون</li>
                 <li><strong>دبیر کمیته آموزش انجمن‌های ورزش‌های رزمی استان تهران</strong> — از سال ۱۴۰۳ تا ۱۴۰۴</li>
             </ul>
         </div>
-    </section>
+    </div>
 
-    <!-- Publications -->
-    <section id="publications" class="section">
+    <div id="publications" class="content-section">
         <div class="container">
             <h2>مقالات علمی</h2>
-            <div class="articles-grid">
-                <div class="article-card">
-                    <h3>The Effect of Resveratrol with Interval Training On Oxidative Stress Biomarkers and Liver Enzymes in Men with Non-Alcoholic Fatty Liver Disease</h3>
-                    <a href="https://jnfh.mums.ac.ir/article_27842.html" target="_blank" class="download-btn">دانلود مقاله</a>
-                </div>
-                <div class="article-card">
-                    <h3>ارتباط بین سطوح ویتامین D با درصد چربی و عملکرد ورزشی مردان ورزشکار تمرین کرده</h3>
-                    <a href="https://civilica.com/doc/1151890/" target="_blank" class="download-btn">دانلود مقاله</a>
-                </div>
+            <div class="article-item">
+                <h3>The Effect of Resveratrol with Interval Training On Oxidative Stress Biomarkers and Liver Enzymes in Men with Non-Alcoholic Fatty Liver Disease</h3>
+                <a href="https://jnfh.mums.ac.ir/article_27842.html" target="_blank">دانلود مقاله</a>
+            </div>
+            <div class="article-item">
+                <h3>ارتباط بین سطوح ویتامین D با درصد چربی و عملکرد ورزشی مردان ورزشکار تمرین کرده</h3>
+                <a href="https://civilica.com/doc/1151890/" target="_blank">دانلود مقاله</a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Contact -->
-    <section id="contact" class="section bg-dark">
+    <div id="contact" class="content-section">
         <div class="container">
             <h2>ارتباط با من</h2>
-            <div class="contact-box">
-                <a href="https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu" target="_blank" class="instagram-btn">
-                    <i class="fab fa-instagram"></i>
-                    <span>پیام در اینستاگرام</span>
-                </a>
-            </div>
+            <a href="https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu" target="_blank" class="instagram-btn">
+                <i class="fab fa-instagram"></i> پیام در اینستاگرام
+            </a>
         </div>
-    </section>
+    </div>
 
     <footer>
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // نمایش پیش‌فرض بخش درباره من
+        window.onload = () => showSection('about');
+
+        function searchSite() {
+            const term = document.getElementById('searchInput').value.toLowerCase();
+            // جستجوی ساده (برای نسخه پیشرفته‌تر بعداً اضافه می‌کنیم)
+            console.log("جستجو برای:", term);
+        }
+    </script>
 </body>
 </html>
