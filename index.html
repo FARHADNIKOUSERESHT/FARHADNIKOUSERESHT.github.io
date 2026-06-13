@@ -34,16 +34,18 @@
     <!-- Publications -->
     <section id="publications" class="section">
         <div class="container">
-            <h2>مقالات علمی</h2>
-            <div class="articles-grid">
-                <div class="article-card">
+            <h2 onclick="toggleArticles()" style="cursor: pointer;">
+                مقالات علمی <span id="arrow">▼</span>
+            </h2>
+            <div id="articles-list" class="articles-list" style="display: none;">
+                <div class="article-item">
                     <h3>The Effect of Resveratrol with Interval Training On Oxidative Stress Biomarkers and Liver Enzymes in Men with Non-Alcoholic Fatty Liver Disease</h3>
                     <a href="https://jnfh.mums.ac.ir/article_27842.html" target="_blank" class="download-btn">
                         <i class="fas fa-download"></i> دانلود مقاله
                     </a>
                 </div>
                 
-                <div class="article-card">
+                <div class="article-item">
                     <h3>ارتباط بین سطوح ویتامین D با درصد چربی و عملکرد ورزشی مردان ورزشکار تمرین کرده</h3>
                     <a href="https://civilica.com/doc/1151890/" target="_blank" class="download-btn">
                         <i class="fas fa-download"></i> دانلود مقاله
@@ -69,5 +71,19 @@
     <footer>
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
     </footer>
+
+    <script>
+        function toggleArticles() {
+            const list = document.getElementById('articles-list');
+            const arrow = document.getElementById('arrow');
+            if (list.style.display === "none") {
+                list.style.display = "block";
+                arrow.textContent = "▲";
+            } else {
+                list.style.display = "none";
+                arrow.textContent = "▼";
+            }
+        }
+    </script>
 </body>
 </html>
