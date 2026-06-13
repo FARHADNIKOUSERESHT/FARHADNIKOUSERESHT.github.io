@@ -10,18 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar with Animation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">دکتر فرهاد نیکوسرشت</div>
             <div class="menu">
-                <a href="#" onclick="showSection('about')">درباره من</a>
-                <a href="#" onclick="showSection('experience')">سوابق علمی</a>
-                <a href="#" onclick="showSection('publications')">مقالات علمی</a>
-                <a href="#" onclick="showSection('contact')">ارتباط با من</a>
-            </div>
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="جستجو در سایت..." onkeyup="searchSite()">
+                <button class="nav-btn active" onclick="showSection('about')">درباره من</button>
+                <button class="nav-btn" onclick="showSection('experience')">سوابق علمی</button>
+                <button class="nav-btn" onclick="showSection('publications')">مقالات علمی</button>
+                <button class="nav-btn" onclick="showSection('contact')">ارتباط با من</button>
             </div>
         </div>
     </nav>
@@ -64,11 +61,11 @@
             <h2>مقالات علمی</h2>
             <div class="article-item">
                 <h3>The Effect of Resveratrol with Interval Training On Oxidative Stress Biomarkers and Liver Enzymes in Men with Non-Alcoholic Fatty Liver Disease</h3>
-                <a href="https://jnfh.mums.ac.ir/article_27842.html" target="_blank">دانلود مقاله</a>
+                <a href="https://jnfh.mums.ac.ir/article_27842.html" target="_blank" class="download-btn">دانلود مقاله</a>
             </div>
             <div class="article-item">
                 <h3>ارتباط بین سطوح ویتامین D با درصد چربی و عملکرد ورزشی مردان ورزشکار تمرین کرده</h3>
-                <a href="https://civilica.com/doc/1151890/" target="_blank">دانلود مقاله</a>
+                <a href="https://civilica.com/doc/1151890/" target="_blank" class="download-btn">دانلود مقاله</a>
             </div>
         </div>
     </div>
@@ -92,15 +89,10 @@
                 section.classList.remove('active');
             });
             document.getElementById(sectionId).classList.add('active');
-        }
 
-        // نمایش پیش‌فرض بخش درباره من
-        window.onload = () => showSection('about');
-
-        function searchSite() {
-            const term = document.getElementById('searchInput').value.toLowerCase();
-            // جستجوی ساده (برای نسخه پیشرفته‌تر بعداً اضافه می‌کنیم)
-            console.log("جستجو برای:", term);
+            // انیمیشن دکمه‌ها
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
         }
     </script>
 </body>
