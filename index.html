@@ -23,47 +23,37 @@
     </section>
 
     <!-- About -->
-    <section class="section">
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="accordion-header" onclick="toggleSection(this)">
-                درباره من <span class="arrow">▼</span>
-            </h2>
-            <div class="accordion-content">
-                <p>دکتر فرهاد نیکوسرشت. دارای مدرک دکتری تخصصی Ph.D فیزیولوژی ورزشی. استاد دانشگاه. فیزیولوژیست. پژوهشگر فیزیولوژی ورزشی.</p>
-                <p>متخصص برنامه‌نویسی تمرین ورزشی و تغذیه ورزشی برای افراد سالم و افراد دارای اختلالات و بیماری‌های خاص. متخصص درمان بیماری کبد چرب غیرالکلی گرید ۱ تا ۳.</p>
-            </div>
+            <h2>درباره من</h2>
+            <p>دکتر فرهاد نیکوسرشت. دارای مدرک دکتری تخصصی Ph.D فیزیولوژی ورزشی. استاد دانشگاه. فیزیولوژیست. پژوهشگر فیزیولوژی ورزشی.</p>
+            <p>متخصص برنامه‌نویسی تمرین ورزشی و تغذیه ورزشی برای افراد سالم و افراد دارای اختلالات و بیماری‌های خاص. متخصص درمان بیماری کبد چرب غیرالکلی گرید ۱ تا ۳.</p>
         </div>
     </section>
 
     <!-- Experience -->
-    <section class="section bg-dark">
+    <section id="experience" class="section bg-dark">
         <div class="container">
-            <h2 class="accordion-header" onclick="toggleSection(this)">
-                سوابق علمی و حرفه‌ای <span class="arrow">▼</span>
-            </h2>
-            <div class="accordion-content">
-                <ul>
-                    <li><strong>استاد دانشگاه</strong> - تدریس در دانشگاه آزاد اسلامی</li>
-                    <li><strong>مربی ورزشی</strong> - از سال ۱۳۹۹ تا کنون</li>
-                    <li><strong>مدرس دوره‌های مربیگری و دانش‌افزایی بین‌المللی</strong> - از سال ۱۳۹۹ تا کنون</li>
-                    <li><strong>دبیر کمیته آموزش انجمن‌های ورزش‌های رزمی استان تهران</strong> - از سال ۱۴۰۳ تا ۱۴۰۴</li>
-                </ul>
-            </div>
+            <h2>سوابق علمی و حرفه‌ای</h2>
+            <ul class="exp-list">
+                <li><strong>استاد دانشگاه</strong> — تدریس در دانشگاه آزاد اسلامی</li>
+                <li><strong>مربی ورزشی</strong> — از سال ۱۳۹7 تا کنون</li>
+                <li><strong>مدرس دوره‌های مربیگری و دانش‌افزایی بین‌المللی</strong> — از سال ۱۳۹۹ تا کنون</li>
+                <li><strong>دبیر کمیته آموزش انجمن‌های ورزش‌های رزمی استان تهران</strong> — از سال ۱۴۰۳ تا ۱۴۰۴</li>
+            </ul>
         </div>
     </section>
 
     <!-- Publications -->
-    <section class="section">
+    <section id="publications" class="section">
         <div class="container">
-            <h2 class="accordion-header" onclick="toggleSection(this)">
-                مقالات علمی <span class="arrow">▼</span>
-            </h2>
-            <div class="accordion-content">
-                <div class="article-item">
+            <h2>مقالات علمی</h2>
+            <div class="articles-grid">
+                <div class="article-card">
                     <h3>The Effect of Resveratrol with Interval Training On Oxidative Stress Biomarkers and Liver Enzymes in Men with Non-Alcoholic Fatty Liver Disease</h3>
                     <a href="https://jnfh.mums.ac.ir/article_27842.html" target="_blank" class="download-btn">دانلود مقاله</a>
                 </div>
-                <div class="article-item">
+                <div class="article-card">
                     <h3>ارتباط بین سطوح ویتامین D با درصد چربی و عملکرد ورزشی مردان ورزشکار تمرین کرده</h3>
                     <a href="https://civilica.com/doc/1151890/" target="_blank" class="download-btn">دانلود مقاله</a>
                 </div>
@@ -72,12 +62,10 @@
     </section>
 
     <!-- Contact -->
-    <section class="section bg-dark">
+    <section id="contact" class="section bg-dark">
         <div class="container">
-            <h2 class="accordion-header" onclick="toggleSection(this)">
-                ارتباط با من <span class="arrow">▼</span>
-            </h2>
-            <div class="accordion-content">
+            <h2>ارتباط با من</h2>
+            <div class="contact-box">
                 <a href="https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu" target="_blank" class="instagram-btn">
                     <i class="fab fa-instagram"></i>
                     <span>پیام در اینستاگرام</span>
@@ -89,19 +77,5 @@
     <footer>
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
     </footer>
-
-    <script>
-        function toggleSection(header) {
-            const content = header.nextElementSibling;
-            const arrow = header.querySelector('.arrow');
-            if (content.style.display === "block") {
-                content.style.display = "none";
-                arrow.textContent = "▼";
-            } else {
-                content.style.display = "block";
-                arrow.textContent = "▲";
-            }
-        }
-    </script>
 </body>
 </html>
