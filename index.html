@@ -7,7 +7,6 @@
     <title>دکتر فرهاد نیکوسرشت | فیزیولوژی ورزشی</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Hero -->
@@ -22,38 +21,29 @@
         </div>
     </section>
 
-    <!-- Sections with Black Buttons -->
-    <div class="section-wrapper">
-        <button class="section-btn" onclick="toggleSection('about')">
-            <i class="fas fa-user"></i> درباره من
-        </button>
-        <div id="about" class="content-box">
+    <!-- Main Content -->
+    <div class="main-content">
+        
+        <!-- About -->
+        <div class="info-card">
             <h2>درباره من</h2>
             <p>دکتر فرهاد نیکوسرشت. دارای مدرک دکتری تخصصی Ph.D فیزیولوژی ورزشی. استاد دانشگاه. فیزیولوژیست. پژوهشگر فیزیولوژی ورزشی.</p>
             <p>متخصص برنامه‌نویسی تمرین ورزشی و تغذیه ورزشی برای افراد سالم و افراد دارای اختلالات و بیماری‌های خاص. متخصص درمان بیماری کبد چرب غیرالکلی گرید ۱ تا ۳.</p>
         </div>
-    </div>
 
-    <div class="section-wrapper">
-        <button class="section-btn" onclick="toggleSection('experience')">
-            <i class="fas fa-briefcase"></i> سوابق علمی و حرفه‌ای
-        </button>
-        <div id="experience" class="content-box">
+        <!-- Experience -->
+        <div class="info-card">
             <h2>سوابق علمی و حرفه‌ای</h2>
             <ul>
                 <li><strong>استاد دانشگاه</strong> — تدریس در دانشگاه آزاد اسلامی</li>
                 <li><strong>مربی ورزشی</strong> — از سال ۱۳۹۹ تا کنون</li>
-                <li><strong>مدرس دوره‌های مربیگری بین‌المللی</strong> — از سال ۱۳۹۹ تا کنون</li>
+                <li><strong>مدرس دوره‌های مربیگری و دانش‌افزایی بین‌المللی</strong> — از سال ۱۳۹۹ تا کنون</li>
                 <li><strong>دبیر کمیته آموزش انجمن‌های ورزش‌های رزمی استان تهران</strong> — از سال ۱۴۰۳ تا ۱۴۰۴</li>
             </ul>
         </div>
-    </div>
 
-    <div class="section-wrapper">
-        <button class="section-btn" onclick="toggleSection('publications')">
-            <i class="fas fa-book"></i> مقالات علمی
-        </button>
-        <div id="publications" class="content-box">
+        <!-- Publications -->
+        <div class="info-card">
             <h2>مقالات علمی</h2>
             <div class="article-item">
                 <h3>The Effect of Resveratrol with Interval Training On Oxidative Stress Biomarkers and Liver Enzymes in Men with Non-Alcoholic Fatty Liver Disease</h3>
@@ -64,35 +54,19 @@
                 <a href="https://civilica.com/doc/1151890/" target="_blank" class="download-btn">دانلود مقاله</a>
             </div>
         </div>
-    </div>
 
-    <div class="section-wrapper">
-        <button class="section-btn" onclick="toggleSection('contact')">
-            <i class="fas fa-envelope"></i> ارتباط با من
-        </button>
-        <div id="contact" class="content-box">
+        <!-- Contact -->
+        <div class="info-card">
             <h2>ارتباط با من</h2>
             <a href="https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu" target="_blank" class="instagram-btn">
                 <i class="fab fa-instagram"></i> پیام در اینستاگرام
             </a>
         </div>
+
     </div>
 
     <footer>
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
     </footer>
-
-    <script>
-        function toggleSection(sectionId) {
-            const allContents = document.querySelectorAll('.content-box');
-            allContents.forEach(box => {
-                if (box.id === sectionId) {
-                    box.style.display = box.style.display === 'block' ? 'none' : 'block';
-                } else {
-                    box.style.display = 'none';
-                }
-            });
-        }
-    </script>
 </body>
 </html>
