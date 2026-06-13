@@ -13,65 +13,54 @@ body {
     line-height: 1.8;
 }
 
-/* Hero */
+/* Hero - عکس کوچک */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
+    gap: 4rem;
     padding: 0 5%;
     background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
     flex-wrap: wrap;
 }
 
-.hero-content h1 { font-size: clamp(2.8rem, 8vw, 4.5rem); }
-.subtitle { color: var(--primary); }
-
-/* Sections with Animation */
-.section {
-    padding: 100px 5%;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+.hero-content {
+    max-width: 600px;
+    text-align: center;
 }
 
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
+.hero-content h1 {
+    font-size: clamp(2.8rem, 8vw, 4.2rem);
+}
+
+.subtitle { color: var(--primary); font-size: 1.9rem; }
+
+.hero-image img {
+    max-width: 320px;     /* عکس کوچک‌تر */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+/* Sections */
+.section {
+    padding: 90px 5%;
+    text-align: center;
 }
 
 h2 {
     font-size: 2.6rem;
     margin-bottom: 2rem;
-    text-align: center;
-    cursor: pointer;
-}
-
-/* Content Boxes */
-.content-box, .articles-grid, .contact-box {
-    max-width: 900px;
-    margin: 0 auto;
-    background: rgba(255,255,255,0.03);
-    padding: 30px;
-    border-radius: 16px;
-    border: 1px solid #333;
-}
-
-/* Download Button */
-.download-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 25px;
-    background: #b0b0b0;
-    color: #111;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero { flex-direction: column; text-align: center; gap: 3rem; }
-    .section { padding: 80px 20px; }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    .hero-image img {
+        max-width: 260px;
+    }
 }
