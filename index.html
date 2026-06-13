@@ -15,7 +15,7 @@
         <div class="hero-content">
             <h1>فرهاد نیکوسرشت</h1>
             <p class="subtitle">دکتری تخصصی (Ph.D) فیزیولوژی ورزشی</p>
-            <p class="desc">متخصص فیزیولوژی ورزشی، فیزیولوژیست، پژوهشگر</p>
+            <p class="desc">استاد دانشگاه • پژوهشگر • متخصص عملکرد ورزشی و تغذیه</p>
         </div>
         <div class="hero-image">
             <img src="profile.jpg" alt="دکتر فرهاد نیکوسرشت">
@@ -31,26 +31,43 @@
         </div>
     </section>
 
+    <!-- Experience -->
+    <section id="experience" class="section bg-dark">
+        <div class="container">
+            <h2>سوابق علمی و حرفه‌ای</h2>
+            <div class="experience-list">
+                <!-- اینجا تجربیات خودت را بنویس -->
+                <div class="exp-item">
+                    <h3>استاد دانشگاه / عضو هیئت علمی</h3>
+                    <p>لطفاً اطلاعات این بخش را برایم بنویس (دانشگاه، سال‌ها، سمت‌ها)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Publications -->
     <section id="publications" class="section">
         <div class="container">
-            <h2 onclick="toggleArticles()" style="cursor: pointer;">
-                مقالات علمی <span id="arrow">▼</span>
-            </h2>
-            <div id="articles-list" class="articles-list" style="display: none;">
-                <div class="article-item">
+            <h2>مقالات علمی</h2>
+            <div class="articles-grid">
+                <div class="article-card">
                     <h3>The Effect of Resveratrol with Interval Training On Oxidative Stress Biomarkers and Liver Enzymes in Men with Non-Alcoholic Fatty Liver Disease</h3>
-                    <a href="https://jnfh.mums.ac.ir/article_27842.html" target="_blank" class="download-btn">
-                        <i class="fas fa-download"></i> دانلود مقاله
-                    </a>
+                    <a href="https://jnfh.mums.ac.ir/article_27842.html" target="_blank" class="download-btn">دانلود مقاله</a>
                 </div>
-                
-                <div class="article-item">
+                <div class="article-card">
                     <h3>ارتباط بین سطوح ویتامین D با درصد چربی و عملکرد ورزشی مردان ورزشکار تمرین کرده</h3>
-                    <a href="https://civilica.com/doc/1151890/" target="_blank" class="download-btn">
-                        <i class="fas fa-download"></i> دانلود مقاله
-                    </a>
+                    <a href="https://civilica.com/doc/1151890/" target="_blank" class="download-btn">دانلود مقاله</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section bg-dark">
+        <div class="container">
+            <h2>تخصص‌ها و مهارت‌ها</h2>
+            <div class="skills-grid">
+                <!-- بعداً با اطلاعات تو پر می‌کنم -->
             </div>
         </div>
     </section>
@@ -71,19 +88,5 @@
     <footer>
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
     </footer>
-
-    <script>
-        function toggleArticles() {
-            const list = document.getElementById('articles-list');
-            const arrow = document.getElementById('arrow');
-            if (list.style.display === "none") {
-                list.style.display = "block";
-                arrow.textContent = "▲";
-            } else {
-                list.style.display = "none";
-                arrow.textContent = "▼";
-            }
-        }
-    </script>
 </body>
 </html>
