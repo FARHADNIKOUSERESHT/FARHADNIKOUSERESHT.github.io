@@ -25,7 +25,7 @@
     <!-- About -->
     <section id="about" class="section">
         <div class="container">
-            <h2>درباره من</h2>
+            <h2 class="section-title">درباره من</h2>
             <div class="content-box">
                 <p>دکتر فرهاد نیکوسرشت. دارای مدرک دکتری تخصصی Ph.D فیزیولوژی ورزشی. استاد دانشگاه. فیزیولوژیست. پژوهشگر فیزیولوژی ورزشی.</p>
                 <p>متخصص برنامه‌نویسی تمرین ورزشی و تغذیه ورزشی برای افراد سالم و افراد دارای اختلالات و بیماری‌های خاص. متخصص درمان بیماری کبد چرب غیرالکلی گرید ۱ تا ۳.</p>
@@ -36,13 +36,13 @@
     <!-- Experience -->
     <section id="experience" class="section bg-dark">
         <div class="container">
-            <h2>سوابق علمی و حرفه‌ای</h2>
+            <h2 class="section-title">سوابق علمی و حرفه‌ای</h2>
             <div class="content-box">
-                <ul>
-                    <li><strong>استاد دانشگاه</strong> — تدریس در دانشگاه آزاد اسلامی</li>
-                    <li><strong>مربی ورزشی</strong> — از سال ۱۳۹۹ تا کنون</li>
-                    <li><strong>مدرس دوره‌های مربیگری و دانش‌افزایی بین‌المللی</strong> — از سال ۱۳۹۹ تا کنون</li>
-                    <li><strong>دبیر کمیته آموزش انجمن‌های ورزش‌های رزمی استان تهران</strong> — از سال ۱۴۰۳ تا ۱۴۰۴</li>
+                <ul class="exp-list">
+                    <li>استاد دانشگاه — تدریس در دانشگاه آزاد اسلامی</li>
+                    <li>مربی ورزشی — از سال ۱۳۹۹ تا کنون</li>
+                    <li>مدرس دوره‌های مربیگری و دانش‌افزایی بین‌المللی — از سال ۱۳۹۹ تا کنون</li>
+                    <li>دبیر کمیته آموزش انجمن‌های ورزش‌های رزمی استان تهران — از سال ۱۴۰۳ تا ۱۴۰۴</li>
                 </ul>
             </div>
         </div>
@@ -51,7 +51,7 @@
     <!-- Publications -->
     <section id="publications" class="section">
         <div class="container">
-            <h2>مقالات علمی</h2>
+            <h2 class="section-title">مقالات علمی</h2>
             <div class="content-box">
                 <div class="article-item">
                     <h3>The Effect of Resveratrol with Interval Training On Oxidative Stress Biomarkers and Liver Enzymes in Men with Non-Alcoholic Fatty Liver Disease</h3>
@@ -68,8 +68,8 @@
     <!-- Contact -->
     <section id="contact" class="section bg-dark">
         <div class="container">
-            <h2>ارتباط با من</h2>
-            <div class="content-box">
+            <h2 class="section-title">ارتباط با من</h2>
+            <div class="contact-box">
                 <a href="https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu" target="_blank" class="instagram-btn">
                     <i class="fab fa-instagram"></i>
                     <span>پیام در اینستاگرام</span>
@@ -81,21 +81,5 @@
     <footer>
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
     </footer>
-
-    <script>
-        // انیمیشن ظاهر شدن بخش‌ها هنگام اسکرول
-        function animateOnScroll() {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.85) {
-                    section.classList.add('visible');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
-    </script>
 </body>
 </html>
