@@ -16,7 +16,7 @@
             <div class="logo">دکتر فرهاد نیکوسرشت</div>
             <div class="menu">
                 <button class="nav-btn active" onclick="showSection('about')">درباره من</button>
-                <button class="nav-btn" onclick="showSection('experience')">سوابق علمی و حرفه‌ای</button>
+                <button class="nav-btn" onclick="showSection('experience')">سوابق علمی</button>
                 <button class="nav-btn" onclick="showSection('publications')">مقالات علمی</button>
                 <button class="nav-btn" onclick="showSection('contact')">ارتباط با من</button>
             </div>
@@ -28,7 +28,7 @@
         <div class="hero-content">
             <h1>فرهاد نیکوسرشت</h1>
             <p class="subtitle">دکتری تخصصی (Ph.D) فیزیولوژی ورزشی</p>
-            <p class="desc">استاد دانشگاه • پژوهشگر • متخصص فیزیولوژی ورزشی</p>
+            <p class="desc">استاد دانشگاه • فیزیولوژیست • پژوهشگر • متخصص فیزیولوژی ورزشی</p>
         </div>
         <div class="hero-image">
             <img src="profile.jpg" alt="دکتر فرهاد نیکوسرشت">
@@ -85,11 +85,17 @@
 
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
             document.getElementById(sectionId).classList.add('active');
 
+            // تغییر حالت فعال دکمه
             document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
             event.currentTarget.classList.add('active');
+
+            // اسکرول نرم به بخش
+            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
         }
     </script>
 </body>
