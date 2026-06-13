@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">دکتر فرهاد نیکوسرشت</div>
@@ -35,7 +35,7 @@
         </div>
     </section>
 
-    <!-- Content Sections -->
+    <!-- About -->
     <div id="about" class="content-section active">
         <div class="container">
             <h2>درباره من</h2>
@@ -44,6 +44,7 @@
         </div>
     </div>
 
+    <!-- Experience -->
     <div id="experience" class="content-section">
         <div class="container">
             <h2>سوابق علمی و حرفه‌ای</h2>
@@ -56,6 +57,7 @@
         </div>
     </div>
 
+    <!-- Publications -->
     <div id="publications" class="content-section">
         <div class="container">
             <h2>مقالات علمی</h2>
@@ -70,6 +72,7 @@
         </div>
     </div>
 
+    <!-- Contact -->
     <div id="contact" class="content-section">
         <div class="container">
             <h2>ارتباط با من</h2>
@@ -90,11 +93,10 @@
             });
             document.getElementById(sectionId).classList.add('active');
 
-            // تغییر حالت فعال دکمه
             document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
             event.currentTarget.classList.add('active');
 
-            // اسکرول نرم به بخش
+            // اسکرول نرم
             document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
         }
     </script>
