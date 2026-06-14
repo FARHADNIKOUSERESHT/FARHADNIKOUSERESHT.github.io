@@ -10,12 +10,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Hero Section - بسیار حرفه‌ای -->
-    <section class="hero">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">دکتر فرهاد نیکوسرشت</div>
+            <div class="menu">
+                <a href="#about">درباره من</a>
+                <a href="#experience">سوابق علمی</a>
+                <a href="#research">علایق پژوهشی</a>
+                <a href="#publications">مقالات</a>
+                <a href="#contact">ارتباط</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
         <div class="hero-content">
             <h1>فرهاد نیکوسرشت</h1>
             <p class="subtitle">دکتری تخصصی (Ph.D) فیزیولوژی ورزشی</p>
             <p class="desc">استاد دانشگاه • فیزیولوژیست • پژوهشگر • متخصص عملکرد ورزشی</p>
+            <a href="#contact" class="cta-button">ارتباط با من</a>
         </div>
         <div class="hero-image">
             <img src="profile.jpg" alt="دکتر فرهاد نیکوسرشت">
@@ -23,7 +38,7 @@
     </section>
 
     <!-- About -->
-    <section class="section">
+    <section id="about" class="section">
         <div class="container">
             <h2>درباره من</h2>
             <p>دکتر فرهاد نیکوسرشت. دارای مدرک دکتری تخصصی Ph.D فیزیولوژی ورزشی. استاد دانشگاه. فیزیولوژیست. پژوهشگر فیزیولوژی ورزشی.</p>
@@ -32,7 +47,7 @@
     </section>
 
     <!-- Experience -->
-    <section class="section bg-dark">
+    <section id="experience" class="section bg-dark">
         <div class="container">
             <h2>سوابق علمی و حرفه‌ای</h2>
             <div class="exp-grid">
@@ -44,8 +59,21 @@
         </div>
     </section>
 
+    <!-- Research Interests -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2>علایق پژوهشی</h2>
+            <div class="research-grid">
+                <div class="research-item">عملکرد ورزشی و ریکاوری</div>
+                <div class="research-item">تغذیه ورزشی و مکمل‌ها</div>
+                <div class="research-item">بیماری‌های متابولیک و ورزش (کبد چرب)</div>
+                <div class="research-item">ویتامین D و عملکرد ورزشی</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Publications -->
-    <section class="section">
+    <section id="publications" class="section bg-dark">
         <div class="container">
             <h2>مقالات علمی</h2>
             <div class="articles-grid">
@@ -62,7 +90,7 @@
     </section>
 
     <!-- Contact -->
-    <section class="section bg-dark">
+    <section id="contact" class="section">
         <div class="container">
             <h2>ارتباط با من</h2>
             <a href="https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu" target="_blank" class="contact-btn">
