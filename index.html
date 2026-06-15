@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">دکتر فرهاد نیکوسرشت</div>
@@ -36,7 +36,7 @@
         </div>
     </section>
 
-    <!-- Content Sections (مخفی تا کلیک) -->
+    <!-- Sections - فقط یکی نمایش داده شود -->
     <div id="about" class="content-section active">
         <div class="container">
             <h2>درباره من</h2>
@@ -94,22 +94,14 @@
 
     <script>
         function showSection(sectionId) {
-            // مخفی کردن همه بخش‌ها
             document.querySelectorAll('.content-section').forEach(section => {
                 section.style.display = 'none';
             });
-            // نمایش بخش انتخاب شده
             document.getElementById(sectionId).style.display = 'block';
 
-            // فعال کردن دکمه
             document.querySelectorAll('.menu a').forEach(link => link.classList.remove('active'));
             event.currentTarget.classList.add('active');
         }
-
-        // نمایش پیش‌فرض بخش درباره من
-        window.onload = function() {
-            document.getElementById('about').style.display = 'block';
-        };
     </script>
 </body>
 </html>
