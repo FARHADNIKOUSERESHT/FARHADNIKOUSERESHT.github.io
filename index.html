@@ -36,7 +36,7 @@
         </div>
     </section>
 
-    <!-- Sections - فقط یکی نمایش داده شود -->
+    <!-- Hidden Sections -->
     <div id="about" class="content-section active">
         <div class="container">
             <h2>درباره من</h2>
@@ -99,7 +99,7 @@
             });
             document.getElementById(sectionId).style.display = 'block';
 
-            document.querySelectorAll('.menu a').forEach(link => link.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
             event.currentTarget.classList.add('active');
         }
     </script>
