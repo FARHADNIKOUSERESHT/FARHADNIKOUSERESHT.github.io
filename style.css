@@ -12,7 +12,7 @@ body {
     line-height: 1.9;
 }
 
-/* Navbar - بهبود موبایل */
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -37,26 +37,22 @@ body {
     font-size: 1.65rem;
     font-weight: 700;
     color: white;
-    white-space: nowrap;
 }
 
 .menu {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 8px;
 }
 
 .menu a {
     color: #ddd;
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 14px;
+    padding: 8px 16px;
     border-radius: 8px;
     transition: all 0.3s;
-    white-space: nowrap;
-    font-size: 0.98rem;
 }
 
 .menu a:hover, .menu a.active {
@@ -64,7 +60,7 @@ body {
     color: var(--primary);
 }
 
-/* Hero */
+/* Hero - عکس کوچک و مرتب */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -75,8 +71,22 @@ body {
     flex-wrap: wrap;
 }
 
-.hero-content h1 { font-size: clamp(2.8rem, 8vw, 4.8rem); }
-.subtitle { color: var(--primary); }
+.hero-content {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.8rem, 8vw, 4.8rem);
+}
+
+.subtitle { color: var(--primary); font-size: 2rem; }
+
+.hero-image img {
+    max-width: 320px;     /* اندازه مناسب برای همه دستگاه‌ها */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
 
 /* Sections */
 .section {
@@ -84,15 +94,8 @@ body {
     text-align: center;
 }
 
-/* Responsive - موبایل قوی‌تر */
+/* Responsive - موبایل */
 @media (max-width: 768px) {
-    .menu {
-        gap: 6px;
-    }
-    .menu a {
-        font-size: 0.92rem;
-        padding: 7px 11px;
-    }
     .hero {
         flex-direction: column;
         text-align: center;
@@ -100,7 +103,14 @@ body {
         padding: 40px 20px;
     }
     .hero-image img {
-        max-width: 300px;
+        max-width: 280px;
+    }
+    .menu {
+        gap: 8px;
+    }
+    .menu a {
+        font-size: 0.95rem;
+        padding: 7px 12px;
     }
     .section {
         padding: 80px 20px;
