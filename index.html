@@ -36,7 +36,7 @@
         </div>
     </section>
 
-    <!-- Content Sections -->
+    <!-- About -->
     <div id="about" class="content-section active">
         <div class="container">
             <h2>درباره من</h2>
@@ -45,6 +45,7 @@
         </div>
     </div>
 
+    <!-- Experience -->
     <div id="experience" class="content-section">
         <div class="container">
             <h2>سوابق علمی و حرفه‌ای</h2>
@@ -57,6 +58,7 @@
         </div>
     </div>
 
+    <!-- Internship -->
     <div id="internship" class="content-section">
         <div class="container">
             <h2>کارورزی و کارآموزی</h2>
@@ -65,6 +67,7 @@
         </div>
     </div>
 
+    <!-- Publications -->
     <div id="publications" class="content-section">
         <div class="container">
             <h2>مقالات علمی</h2>
@@ -79,6 +82,7 @@
         </div>
     </div>
 
+    <!-- Contact -->
     <div id="contact" class="content-section">
         <div class="container">
             <h2>ارتباط با من</h2>
@@ -95,9 +99,9 @@
     <script>
         function showSection(sectionId) {
             document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
+                section.style.display = 'none';
             });
-            document.getElementById(sectionId).classList.add('active');
+            document.getElementById(sectionId).style.display = 'block';
 
             document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
             event.currentTarget.classList.add('active');
