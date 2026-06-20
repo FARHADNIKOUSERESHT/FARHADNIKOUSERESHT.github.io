@@ -1,6 +1,7 @@
 :root {
     --primary: #b0b0b0;
     --dark: #0a0a0a;
+    --card: rgba(25, 25, 25, 0.92);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,57 +27,67 @@ body {
 .nav-container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 1.2rem 5%;
+    padding: 1.3rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo { font-size: 1.65rem; font-weight: 700; color: white; }
+.logo { font-size: 1.7rem; font-weight: 700; color: white; }
 
 .menu a {
     color: #ddd;
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 16px;
+    padding: 8px 18px;
     border-radius: 8px;
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
 .menu a:hover, .menu a.active {
-    background: rgba(176, 176, 176, 0.2);
+    background: rgba(176, 176, 176, 0.25);
     color: var(--primary);
 }
 
-/* Hero - عکس کوچک */
+/* Hero */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 6rem;
     padding: 0 6%;
     background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
     flex-wrap: wrap;
 }
 
-.hero-content h1 { font-size: clamp(2.8rem, 8vw, 4.8rem); }
-.subtitle { color: var(--primary); }
+.hero-content h1 { font-size: clamp(3rem, 8vw, 5rem); }
+.subtitle { color: var(--primary); font-size: 2.1rem; }
 
 .hero-image img {
-    max-width: 280px;   /* کوچک مثل قبل */
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    max-width: 320px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.8);
 }
 
 /* Sections */
 .section {
-    padding: 100px 6%;
+    padding: 110px 6%;
     text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--card);
+    padding: 50px;
+    border-radius: 24px;
+    border: 1px solid #333;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero { flex-direction: column; text-align: center; gap: 3rem; padding: 40px 20px; }
-    .hero-image img { max-width: 240px; }
+    .hero { flex-direction: column; text-align: center; gap: 3.5rem; padding: 40px 20px; }
+    .hero-image img { max-width: 280px; }
     .section { padding: 80px 20px; }
 }
