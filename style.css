@@ -1,7 +1,6 @@
 :root {
     --primary: #b0b0b0;
     --dark: #0a0a0a;
-    --card: rgba(25, 25, 25, 0.92);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -41,7 +40,7 @@ body {
     font-weight: 500;
     padding: 8px 16px;
     border-radius: 8px;
-    transition: all 0.4s;
+    transition: all 0.3s;
 }
 
 .menu a:hover, .menu a.active {
@@ -49,48 +48,35 @@ body {
     color: var(--primary);
 }
 
-/* Hero */
+/* Hero - عکس کوچک */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    gap: 6rem;
+    gap: 5rem;
     padding: 0 6%;
     background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
     flex-wrap: wrap;
 }
 
-.hero-content h1 { font-size: clamp(2.8rem, 8vw, 5rem); }
+.hero-content h1 { font-size: clamp(2.8rem, 8vw, 4.8rem); }
 .subtitle { color: var(--primary); }
 
-/* Content Sections - انیمیشن تخصصی و جذاب */
-.content-section {
-    display: none;
+.hero-image img {
+    max-width: 280px;   /* کوچک مثل قبل */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+/* Sections */
+.section {
     padding: 100px 6%;
-    opacity: 0;
-    transform: translateY(60px) scale(0.95);
-    transition: all 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.content-section.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    background: var(--card);
-    padding: 50px;
-    border-radius: 24px;
-    border: 1px solid #333;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+    text-align: center;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero { flex-direction: column; text-align: center; gap: 3.5rem; padding: 40px 20px; }
-    .hero-image img { max-width: 280px; }
-    .content-section { padding: 80px 20px; }
+    .hero { flex-direction: column; text-align: center; gap: 3rem; padding: 40px 20px; }
+    .hero-image img { max-width: 240px; }
+    .section { padding: 80px 20px; }
 }
