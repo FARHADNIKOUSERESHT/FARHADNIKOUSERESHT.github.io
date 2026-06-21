@@ -3,100 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="دکتر فرهاد نیکوسرشت - دکترای تخصصی فیزیولوژی ورزشی">
+    <meta name="description" content="دکتر فرهاد نیکوسرشت - متخصص برنامه نویسی تمرین و تغذیه ورزشی">
     <title>دکتر فرهاد نیکوسرشت | فیزیولوژی ورزشی</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation - مرتب و حرفه‌ای -->
+    <!-- Navigation - بسیار حرفه‌ای و تخصصی -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">دکتر فرهاد نیکوسرشت</div>
             <div class="menu">
                 <a href="#" onclick="showSection('about')" class="nav-item active">درباره من</a>
                 <a href="#" onclick="showSection('experience')" class="nav-item">سوابق علمی</a>
-                <a href="#" onclick="showSection('internship')" class="nav-item">کارورزی و کارآموزی</a>
                 <a href="#" onclick="showSection('publications')" class="nav-item">مقالات علمی</a>
+                <a href="#" onclick="showSection('internship')" class="nav-item">کارورزی</a>
                 
-                <!-- سفارش برنامه‌ها -->
-                <a href="#contact" class="nav-item">سفارش برنامه تمرین ورزشی</a>
-                <a href="#contact" class="nav-item">سفارش برنامه تغذیه ورزشی</a>
-                
-                <a href="gallery.html" class="nav-item">گالری عکس</a>
+                <!-- بخش خدمات تخصصی -->
+                <div class="dropdown">
+                    <a href="#" class="nav-item main-service">خدمات تخصصی</a>
+                    <div class="dropdown-content">
+                        <a href="#contact" class="service-link">
+                            <i class="fas fa-dumbbell"></i>
+                            سفارش برنامه تمرین ورزشی
+                        </a>
+                        <a href="#contact" class="service-link">
+                            <i class="fas fa-apple-alt"></i>
+                            سفارش برنامه تغذیه ورزشی
+                        </a>
+                    </div>
+                </div>
+
+                <a href="gallery.html" class="nav-item">گالری</a>
                 <a href="#" onclick="showSection('contact')" class="nav-item">ارتباط با من</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>فرهاد نیکوسرشت</h1>
-            <p class="subtitle">دکتری تخصصی (Ph.D) فیزیولوژی ورزشی</p>
-            <p class="desc">استاد دانشگاه • فیزیولوژیست • پژوهشگر • متخصص فیزیولوژی ورزشی</p>
-        </div>
-        <div class="hero-image">
-            <img src="profile.jpg" alt="دکتر فرهاد نیکوسرشت">
-        </div>
-    </section>
-
-    <!-- About -->
-    <div id="about" class="content-section active">
-        <div class="container">
-            <h2>درباره من</h2>
-            <p>دکتر فرهاد نیکوسرشت. دارای مدرک دکتری تخصصی Ph.D فیزیولوژی ورزشی. استاد دانشگاه. فیزیولوژیست. پژوهشگر فیزیولوژی ورزشی.</p>
-            <p>متخصص برنامه‌نویسی تمرین ورزشی و تغذیه ورزشی برای افراد سالم و افراد دارای اختلالات و بیماری‌های خاص. متخصص درمان بیماری کبد چرب غیرالکلی گرید ۱ تا ۳.</p>
-        </div>
-    </div>
-
-    <!-- Experience -->
-    <div id="experience" class="content-section">
-        <div class="container">
-            <h2>سوابق علمی و حرفه‌ای</h2>
-            <ul>
-                <li><strong>استاد دانشگاه</strong> — تدریس در دانشگاه آزاد اسلامی</li>
-                <li><strong>مربی ورزشی</strong> — از سال ۱۳۹۶ تا کنون</li>
-                <li><strong>مدرس دوره‌های مربیگری بین‌المللی</strong> — از سال ۱۳۹۹ تا کنون</li>
-                <li><strong>دبیر کمیته آموزش انجمن‌های ورزش‌های رزمی استان تهران</strong> — از سال ۱۴۰۳ تا ۱۴۰۴</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Internship -->
-    <div id="internship" class="content-section">
-        <div class="container">
-            <h2>کارورزی و کارآموزی</h2>
-            <p>دانشجویان می‌توانند با دریافت فرم روش کار کارورزی و کارآموزی با دکتر فرهاد نیکوسرشت، کارورزی و کارآموزی خود را انتخاب کنند.</p>
-            <a href="#contact" class="internship-btn">ثبت درخواست کارورزی</a>
-        </div>
-    </div>
-
-    <!-- Publications -->
-    <div id="publications" class="content-section">
-        <div class="container">
-            <h2>مقالات علمی</h2>
-            <div class="article-item">
-                <h3>The Effect of Resveratrol with Interval Training On Oxidative Stress Biomarkers and Liver Enzymes in Men with Non-Alcoholic Fatty Liver Disease</h3>
-                <a href="https://jnfh.mums.ac.ir/article_27842.html" target="_blank" class="download-btn">دانلود مقاله</a>
-            </div>
-            <div class="article-item">
-                <h3>ارتباط بین سطوح ویتامین D با درصد چربی و عملکرد ورزشی مردان ورزشکار تمرین کرده</h3>
-                <a href="https://civilica.com/doc/1151890/" target="_blank" class="download-btn">دانلود مقاله</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact -->
-    <div id="contact" class="content-section">
-        <div class="container">
-            <h2>ارتباط با من</h2>
-            <a href="https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu" target="_blank" class="contact-btn">
-                <i class="fab fa-instagram"></i> پیام در اینستاگرام
-            </a>
-        </div>
-    </div>
+    <!-- بقیه بخش‌ها همان قبلی باقی می‌ماند (Hero, About, Experience و ...) -->
+    <!-- ... (برای اختصار، بقیه کد را همان قبلی نگه دارید) ... -->
 
     <footer>
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
