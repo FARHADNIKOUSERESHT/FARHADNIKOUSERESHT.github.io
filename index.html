@@ -85,11 +85,25 @@
     </footer>
 
     <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
+       function showSection(sectionId) {
+        // مخفی کردن همه بخش‌ها
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // نمایش فقط بخش کلیک شده
+        const activeSection = document.getElementById(sectionId);
+        if (activeSection) {
+            activeSection.style.display = 'block';
+        }
+
+        // فعال کردن آیتم منو
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // پیدا کردن و فعال کردن لینک کلیک شده
+        event.currentTarget.classList.add('active');
         }
     </script>
 </body>
