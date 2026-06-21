@@ -1,135 +1,55 @@
-:root {
-    --primary: #b0b0b0;
-    --dark: #0a0a0a;
-    --card: rgba(20, 20, 20, 0.95);
-}
+/* ... کدهای قبلی را نگه دارید و این بخش‌ها را اضافه یا جایگزین کنید ... */
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    font-family: 'Vazirmatn', sans-serif;
-    background: var(--dark);
-    color: #e8e8e8;
-    line-height: 1.9;
-}
-
-/* Navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(10,10,10,0.98);
-    backdrop-filter: blur(20px);
-    z-index: 1000;
-    border-bottom: 1px solid #222;
-}
-
-.nav-container {
-    max-width: 1350px;
-    margin: 0 auto;
-    padding: 1.4rem 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: white;
-}
-
-/* آیتم‌های منو با فاصله دقیق و انیمیشن قوی */
-.menu {
-    display: flex;
-    gap: 18px;           /* فاصله دقیق بین آیتم‌ها */
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.menu a {
-    color: #ddd;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 10px 20px;   /* فاصله داخلی دقیق */
-    border-radius: 12px;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    white-space: nowrap;
+/* Dropdown حرفه‌ای */
+.dropdown {
     position: relative;
-    overflow: hidden;
+    display: inline-block;
 }
 
-.menu a:hover, .menu a.active {
-    background: rgba(176, 176, 176, 0.18);
-    color: var(--primary);
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(176, 176, 176, 0.15);
-}
-
-/* انیمیشن زیرخط */
-.menu a:after {
-    content: '';
+.dropdown-content {
+    display: none;
     position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 8px;
-    left: 50%;
-    background: var(--primary);
-    transition: all 0.4s ease;
-    transform: translateX(-50%);
+    background: rgba(20,20,20,0.98);
+    min-width: 280px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    border-radius: 12px;
+    top: 100%;
+    right: 0;
+    z-index: 1001;
+    padding: 12px 0;
+    border: 1px solid #444;
 }
 
-.menu a:hover:after, .menu a.active:after {
-    width: 70%;
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.4s ease;
 }
 
-/* Hero */
-.hero {
-    min-height: 100vh;
+.service-link {
+    color: #ddd;
+    padding: 14px 20px;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 6rem;
-    padding: 0 7%;
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-    flex-wrap: wrap;
+    gap: 12px;
+    transition: all 0.3s;
 }
 
-.hero-content h1 { font-size: clamp(3rem, 8vw, 5.2rem); }
-.subtitle { color: var(--primary); }
-
-/* Sections */
-.content-section {
-    display: none;
-    padding: 120px 7%;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+.service-link:hover {
+    background: rgba(176,176,176,0.15);
+    color: var(--primary);
+    padding-right: 28px;
 }
 
-.content-section.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    background: var(--card);
-    padding: 55px;
-    border-radius: 26px;
-    box-shadow: 0 25px 70px rgba(0,0,0,0.7);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .menu {
-        gap: 8px;
-    }
-    .menu a {
-        padding: 8px 14px;
-        font-size: 0.95rem;
-    }
-    .hero { flex-direction: column; text-align: center; gap: 3.5rem; padding: 40px 20px; }
-    .hero-image img { max-width: 280px; }
+/* Main Service Button */
+.main-service {
+    background: linear-gradient(90deg, #b0b0b0, #8a8a8a);
+    color: #000 !important;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(176,176,176,0.3);
 }
