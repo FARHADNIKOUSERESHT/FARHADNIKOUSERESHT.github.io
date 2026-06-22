@@ -7,7 +7,6 @@
     <title>دکتر فرهاد نیکوسرشت | فیزیولوژی ورزشی</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -20,7 +19,7 @@
         </div>
     </nav>
 
-    <!-- Full Menu - نمایش تمام آیتم‌ها -->
+    <!-- Full Menu -->
     <div id="fullMenu" class="full-menu">
         <div class="menu-grid">
             <a href="#" onclick="showSection('about'); toggleFullMenu()" class="menu-item">درباره من</a>
@@ -53,7 +52,7 @@
         </div>
     </div>
 
-    <!-- سایر بخش‌ها (experience, internship, publications, contact) را از نسخه قبلی کپی کنید -->
+    <!-- بقیه بخش‌ها (experience, internship, publications, contact) را از نسخه قبلی کپی کنید -->
 
     <footer>
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
@@ -62,7 +61,11 @@
     <script>
         function toggleFullMenu() {
             const menu = document.getElementById('fullMenu');
-            menu.style.display = (menu.style.display === 'grid') ? 'none' : 'grid';
+            if (menu.style.display === 'grid') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'grid';
+            }
         }
 
         function showSection(sectionId) {
@@ -70,7 +73,6 @@
                 section.style.display = 'none';
             });
             document.getElementById(sectionId).style.display = 'block';
-            // بستن منو بعد از انتخاب
             document.getElementById('fullMenu').style.display = 'none';
         }
     </script>
