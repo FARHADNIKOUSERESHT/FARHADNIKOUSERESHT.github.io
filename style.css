@@ -166,3 +166,53 @@ transition: transform 0.8s ease;
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(255, 180, 50, 0.4);
 }
+/* Full Menu - امکانات سایت */
+.full-menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 15, 15, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid #444;
+    border-radius: 20px;
+    padding: 30px 40px;
+    z-index: 9999;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    max-width: 90%;
+    width: 420px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.menu-item {
+    display: block;
+    padding: 16px 20px;
+    background: rgba(40, 40, 40, 0.8);
+    color: #ddd;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid #555;
+}
+
+.menu-item:hover {
+    background: #b0b0b0;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .full-menu {
+        width: 92%;
+        padding: 25px 20px;
+    }
+}
