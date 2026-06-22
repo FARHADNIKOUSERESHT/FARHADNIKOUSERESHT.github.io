@@ -54,27 +54,31 @@
 
         <!-- منوی تخصصی سمت راست - تبلیغاتی -->
         <aside class="special-sidebar">
-            <h3>خدمات تخصصی </h3>
-            
-            <div class="service-card">
-                <div class="icon-circle">
-                    <i class="fas fa-dumbbell"></i>
-                </div>
-                <h4>برنامه‌نویسی تمرین ورزشی</h4>
-                <p>برنامه تمرینی کاملاً شخصی‌سازی شده برای ورزشکاران، افراد عادی و بیماران خاص</p>
-               <a href="#" onclick="orderService('تمرین')" class="service-link">
-                <a href="#contact" class="service-btn">سفارش برنامه تمرین</a>
-            </div>
+        <aside class="special-sidebar">
+    <h3>خدمات تخصصی</h3>
+    
+    <div class="service-card">
+        <div class="icon-circle">
+            <i class="fas fa-dumbbell"></i>
+        </div>
+        <h4>برنامه‌نویسی تمرین ورزشی</h4>
+        <p>برنامه تمرینی کاملاً شخصی‌سازی شده برای ورزشکاران، افراد عادی و بیماران خاص</p>
+        <a href="#" onclick="orderService('تمرین')" class="service-btn">
+            سفارش برنامه تمرین
+        </a>
+    </div>
 
-            <div class="service-card">
-                <div class="icon-circle">
-                    <i class="fas fa-apple-alt"></i>
-                </div>
-                <h4>برنامه‌نویسی تغذیه ورزشی</h4>
-              <p>رژیم غذایی تخصصی متناسب با هدف شما (کاهش وزن، افزایش عضله، بهبود عملکرد، درمان بیماری)</p>
-             <a href="#" onclick="orderService('تغذیه')" class="service-link">
-                <a href="#contact" class="service-btn">سفارش برنامه تغذیه</a>
-            </div>
+    <div class="service-card">
+        <div class="icon-circle">
+            <i class="fas fa-apple-alt"></i>
+        </div>
+        <h4>برنامه‌نویسی تغذیه ورزشی</h4>
+        <p>رژیم غذایی تخصصی متناسب با هدف شما (کاهش وزن، افزایش عضله، بهبود عملکرد، درمان بیماری)</p>
+        <a href="#" onclick="orderService('تغذیه')" class="service-btn">
+            سفارش برنامه تغذیه
+        </a>
+    </div>
+</aside>
 
             <div class="sidebar-note">
                 <p>برای دریافت مشاوره و برنامه شخصی، همین حالا با من در ارتباط باشید.</p>
@@ -93,6 +97,12 @@
             });
             document.getElementById(sectionId).style.display = 'block';
         }
-    </script>
+   
+<script>
+    function orderService(type) {
+        alert("در اینستاگرام پیام دهید\n\nبرای دریافت برنامه " + type + " ورزشی با من در ارتباط باشید.");
+        window.open("https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu", "_blank");
+    }
+</script>
 </body>
 </html>
