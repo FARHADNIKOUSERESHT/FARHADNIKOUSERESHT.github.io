@@ -209,3 +209,55 @@ transition: transform 0.8s ease;
         font-size: 0.92rem;
     }
 }
+/* Responsive بسیار قوی برای همه گوشی‌ها */
+@media (max-width: 1024px) {
+    .main-wrapper {
+        flex-direction: column !important;
+        padding: 20px 15px;
+    }
+    
+    .special-sidebar {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        left: auto !important;
+        top: auto !important;
+        margin: 30px auto;
+    }
+    
+    .hero {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 3rem !important;
+        padding: 100px 20px 60px !important;
+    }
+    
+    .hero-image img {
+        max-width: 300px !important;
+    }
+    
+    .nav-container {
+        flex-direction: column !important;
+        padding: 1rem 5% !important;
+    }
+    
+    .menu {
+        gap: 8px !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .container {
+        padding: 35px 20px !important;
+    }
+}
+
+/* گوشی‌های خیلی کوچک */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.8rem !important;
+    }
+    .subtitle {
+        font-size: 1.9rem !important;
+    }
+}
