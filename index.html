@@ -3,33 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="دکتر فرهاد نیکوسرشت - دکترای تخصصی فیزیولوژی ورزشی">
+    <meta name="description" content="دکتر فرهاد نیکوسرشت - متخصص برنامه نویسی تمرین و تغذیه ورزشی">
     <title>دکتر فرهاد نیکوسرشت | فیزیولوژی ورزشی</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Top Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">دکتر فرهاد نیکوسرشت</div>
             <div class="menu">
-                <a href="#" onclick="toggleFullMenu()" class="nav-item main-menu">امکانات سایت</a>
+                <a href="#" onclick="showSection('about')" class="nav-item active">درباره من</a>
+                <a href="#" onclick="showSection('experience')" class="nav-item">سوابق علمی</a>
+                <a href="#" onclick="showSection('internship')" class="nav-item">کارورزی</a>
+                <a href="#" onclick="showSection('publications')" class="nav-item">مقالات علمی</a>
+                <a href="gallery.html" class="nav-item">گالری</a>
+                <a href="#" onclick="showSection('contact')" class="nav-item">ارتباط با من</a>
             </div>
         </div>
     </nav>
-
-    <!-- Full Menu -->
-    <div id="fullMenu" class="full-menu">
-        <div class="menu-grid">
-            <a href="#" onclick="showSection('about'); toggleFullMenu()" class="menu-item">درباره من</a>
-            <a href="#" onclick="showSection('experience'); toggleFullMenu()" class="menu-item">سوابق علمی</a>
-            <a href="#" onclick="showSection('internship'); toggleFullMenu()" class="menu-item">کارورزی و کارآموزی</a>
-            <a href="#" onclick="showSection('publications'); toggleFullMenu()" class="menu-item">مقالات علمی</a>
-            <a href="gallery.html" onclick="toggleFullMenu()" class="menu-item">گالری عکس</a>
-            <a href="#" onclick="showSection('contact'); toggleFullMenu()" class="menu-item">ارتباط با من</a>
-        </div>
-    </div>
 
     <!-- Hero -->
     <section class="hero">
@@ -43,37 +37,59 @@
         </div>
     </section>
 
-    <!-- Content Sections -->
-    <div id="about" class="content-section active">
-        <div class="container">
-            <h2>درباره من</h2>
-            <p>دکتر فرهاد نیکوسرشت. دارای مدرک دکتری تخصصی Ph.D فیزیولوژی ورزشی. استاد دانشگاه. فیزیولوژیست. پژوهشگر فیزیولوژی ورزشی.</p>
-            <p>متخصص برنامه‌نویسی تمرین ورزشی و تغذیه ورزشی برای افراد سالم و افراد دارای اختلالات و بیماری‌های خاص.</p>
-        </div>
-    </div>
+    <div class="main-wrapper">
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- About -->
+            <div id="about" class="content-section active">
+                <div class="container">
+                    <h2>درباره من</h2>
+                    <p>دکتر فرهاد نیکوسرشت. دارای مدرک دکتری تخصصی Ph.D فیزیولوژی ورزشی. استاد دانشگاه. فیزیولوژیست. پژوهشگر فیزیولوژی ورزشی.</p>
+                    <p>متخصص برنامه‌نویسی تمرین ورزشی و تغذیه ورزشی برای افراد سالم و افراد دارای اختلالات و بیماری‌های خاص.</p>
+                </div>
+            </div>
 
-    <!-- بقیه بخش‌ها (experience, internship, publications, contact) را از نسخه قبلی کپی کنید -->
+            <!-- بقیه بخش‌ها (experience, internship, publications, contact) را می‌توانید از نسخه قبلی کپی کنید -->
+        </div>
+
+        <!-- منوی تخصصی سمت راست - تبلیغاتی -->
+        <aside class="special-sidebar">
+            <h3>خدمات تخصصی </h3>
+            
+            <div class="service-card">
+                <div class="icon-circle">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h4>برنامه‌نویسی تمرین ورزشی</h4>
+                <p>برنامه تمرینی کاملاً شخصی‌سازی شده برای ورزشکاران، افراد عادی و بیماران خاص</p>
+                <a href="#contact" class="service-btn">سفارش برنامه تمرین</a>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-circle">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <h4>برنامه‌نویسی تغذیه ورزشی</h4>
+                <p>رژیم غذایی تخصصی متناسب با هدف شما (کاهش وزن، افزایش عضله، بهبود عملکرد، درمان بیماری)</p>
+                <a href="#contact" class="service-btn">سفارش برنامه تغذیه</a>
+            </div>
+
+            <div class="sidebar-note">
+                <p>برای دریافت مشاوره و برنامه شخصی، همین حالا با من در ارتباط باشید.</p>
+            </div>
+        </aside>
+    </div>
 
     <footer>
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
     </footer>
 
     <script>
-        function toggleFullMenu() {
-            const menu = document.getElementById('fullMenu');
-            if (menu.style.display === 'grid') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'grid';
-            }
-        }
-
         function showSection(sectionId) {
             document.querySelectorAll('.content-section').forEach(section => {
                 section.style.display = 'none';
             });
             document.getElementById(sectionId).style.display = 'block';
-            document.getElementById('fullMenu').style.display = 'none';
         }
     </script>
 </body>
