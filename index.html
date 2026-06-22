@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Top Navigation -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">دکتر فرهاد نیکوسرشت</div>
@@ -38,9 +38,7 @@
     </section>
 
     <div class="main-wrapper">
-        <!-- Main Content -->
         <div class="main-content">
-            <!-- About -->
             <div id="about" class="content-section active">
                 <div class="container">
                     <h2>درباره من</h2>
@@ -48,11 +46,9 @@
                     <p>متخصص برنامه‌نویسی تمرین ورزشی و تغذیه ورزشی برای افراد سالم و افراد دارای اختلالات و بیماری‌های خاص.</p>
                 </div>
             </div>
-
-            <!-- بقیه بخش‌ها (experience, internship, publications, contact) را می‌توانید از نسخه قبلی کپی کنید -->
         </div>
 
-       <!-- Sidebar راست -->
+        <!-- Sidebar راست -->
         <aside class="special-sidebar">
             <h3>خدمات تخصصی</h3>
             
@@ -70,7 +66,7 @@
                     <i class="fas fa-apple-alt"></i>
                 </div>
                 <h4>برنامه‌نویسی تغذیه ورزشی</h4>
-                <p>رژیم غذایی تخصصی متناسب با هدف شما (کاهش وزن، افزایش عضله، بهبود عملکرد، درمان بیماری)</p>
+                <p>رژیم غذایی تخصصی متناسب با هدف شما</p>
                 <a href="#" onclick="orderService('تغذیه')" class="service-btn">سفارش برنامه تغذیه</a>
             </div>
         </aside>
@@ -87,19 +83,10 @@
             });
             document.getElementById(sectionId).style.display = 'block';
         }
-   
-<script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
 
         function orderService(type) {
             const message = "برای ثبت سفارش در اینستاگرام پیام دهید";
-            
-            if (confirm(message + "\n\nبرای دریافت برنامه " + type + " ورزشی، OK را بزنید تا به اینستاگرام هدایت شوید.")) {
+            if (confirm(message + "\n\nبرای دریافت برنامه " + type + " ورزشی، OK را بزنید")) {
                 window.open("https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu", "_blank");
             }
         }
