@@ -100,8 +100,13 @@
    
 <script>
     function orderService(type) {
-        alert("در اینستاگرام پیام دهید\n\nبرای دریافت برنامه " + type + " ورزشی با من در ارتباط باشید.");
-        window.open("https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu", "_blank");
+        // نمایش پیام
+        const message = "برای ثبت سفارش در اینستاگرام پیام دهید";
+        
+        if (confirm(message + "\n\nآیا مایلید به صفحه اینستاگرام من هدایت شوید؟")) {
+            // بعد از زدن OK به اینستاگرام هدایت می‌شود
+            window.open("https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu", "_blank");
+        }
     }
 </script>
 </body>
