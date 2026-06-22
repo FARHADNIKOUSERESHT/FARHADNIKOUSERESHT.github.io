@@ -98,16 +98,24 @@
             document.getElementById(sectionId).style.display = 'block';
         }
    
-<script>
-    function orderService(type) {
-        // نمایش پیام
-        const message = "برای ثبت سفارش در اینستاگرام پیام دهید";
-        
-        if (confirm(message + "\n\nآیا مایلید به صفحه اینستاگرام من هدایت شوید؟")) {
-            // بعد از زدن OK به اینستاگرام هدایت می‌شود
-            window.open("https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu", "_blank");
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
         }
-    }
-</script>
+
+        // تابع سفارش برنامه‌ها (درخواست شما)
+        function orderService(type) {
+            const message = "برای ثبت سفارش در اینستاگرام پیام دهید";
+            
+            if (confirm(message + "\n\nبرای دریافت برنامه " + type + " ورزشی، OK را بزنید تا به اینستاگرام هدایت شوید.")) {
+                window.open("https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu", "_blank");
+            }
+        }
+    </script>
+</body>
+</html>
 </body>
 </html>
