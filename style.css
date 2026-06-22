@@ -122,3 +122,47 @@ transition: transform 0.8s ease;
     margin-left: 12px;
     font-size: 1.4rem;
 }
+/* Floating Sidebar Bottom Right */
+.floating-sidebar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 320px;
+    background: rgba(40, 30, 10, 0.85); /* زرد تیره شیشه‌ای */
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 180, 50, 0.3);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    z-index: 999;
+}
+
+.floating-sidebar h3 {
+    text-align: center;
+    color: #ffcc66;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.service-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    background: rgba(60, 45, 15, 0.9);
+    color: white;
+    text-decoration: none;
+    border-radius: 16px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 200, 80, 0.4);
+}
+
+.service-btn:hover {
+    background: #ffcc66;
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 180, 50, 0.4);
+}
