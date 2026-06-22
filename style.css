@@ -156,3 +156,56 @@ transition: transform 0.8s ease;
     margin-left: 12px;
     font-size: 1.4rem;
 }
+/* Responsive قوی برای همه گوشی‌ها */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem 5%;
+    }
+    
+    .menu {
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+        padding: 100px 20px 60px;
+    }
+    
+    .hero-image img {
+        max-width: 280px;
+    }
+    
+    /* Sidebar سمت راست روی موبایل غیرفعال یا پایین بیاید */
+    .special-sidebar, .left-advertisement {
+        position: relative;
+        width: 100%;
+        left: auto;
+        right: auto;
+        top: auto;
+        margin: 30px auto;
+        max-width: 420px;
+    }
+    
+    .main-wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .container {
+        padding: 35px 20px;
+    }
+}
+
+/* برای گوشی‌های خیلی کوچک */
+@media (max-width: 480px) {
+    .menu a {
+        padding: 8px 12px;
+        font-size: 0.92rem;
+    }
+}
