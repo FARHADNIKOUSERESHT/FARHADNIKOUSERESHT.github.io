@@ -15,21 +15,20 @@
         <div class="nav-container">
             <div class="logo">دکتر فرهاد نیکوسرشت</div>
             <div class="menu">
-                <!-- آیتم اصلی امکانات سایت -->
-                <a href="#" onclick="toggleMenu()" class="nav-item main-menu">امکانات سایت</a>
+                <a href="#" onclick="toggleFullMenu()" class="nav-item main-menu">امکانات سایت</a>
             </div>
         </div>
     </nav>
 
-    <!-- Full Menu (پنهان تا کلیک شود) -->
+    <!-- Full Menu - نمایش تمام آیتم‌ها -->
     <div id="fullMenu" class="full-menu">
-        <div class="menu-items">
-            <a href="#" onclick="showSection('about')" class="menu-link">درباره من</a>
-            <a href="#" onclick="showSection('experience')" class="menu-link">سوابق علمی</a>
-            <a href="#" onclick="showSection('internship')" class="menu-link">کارورزی و کارآموزی</a>
-            <a href="#" onclick="showSection('publications')" class="menu-link">مقالات علمی</a>
-            <a href="gallery.html" class="menu-link">گالری عکس</a>
-            <a href="#" onclick="showSection('contact')" class="menu-link">ارتباط با من</a>
+        <div class="menu-grid">
+            <a href="#" onclick="showSection('about'); toggleFullMenu()" class="menu-item">درباره من</a>
+            <a href="#" onclick="showSection('experience'); toggleFullMenu()" class="menu-item">سوابق علمی</a>
+            <a href="#" onclick="showSection('internship'); toggleFullMenu()" class="menu-item">کارورزی و کارآموزی</a>
+            <a href="#" onclick="showSection('publications'); toggleFullMenu()" class="menu-item">مقالات علمی</a>
+            <a href="gallery.html" onclick="toggleFullMenu()" class="menu-item">گالری عکس</a>
+            <a href="#" onclick="showSection('contact'); toggleFullMenu()" class="menu-item">ارتباط با من</a>
         </div>
     </div>
 
@@ -46,17 +45,24 @@
     </section>
 
     <!-- Content Sections -->
-    <div id="about" class="content-section active"> ... </div>
-    <!-- بقیه بخش‌ها (experience, internship, publications, contact) را همان قبلی نگه دارید -->
+    <div id="about" class="content-section active">
+        <div class="container">
+            <h2>درباره من</h2>
+            <p>دکتر فرهاد نیکوسرشت. دارای مدرک دکتری تخصصی Ph.D فیزیولوژی ورزشی. استاد دانشگاه. فیزیولوژیست. پژوهشگر فیزیولوژی ورزشی.</p>
+            <p>متخصص برنامه‌نویسی تمرین ورزشی و تغذیه ورزشی برای افراد سالم و افراد دارای اختلالات و بیماری‌های خاص.</p>
+        </div>
+    </div>
+
+    <!-- سایر بخش‌ها (experience, internship, publications, contact) را از نسخه قبلی کپی کنید -->
 
     <footer>
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
     </footer>
 
     <script>
-        function toggleMenu() {
+        function toggleFullMenu() {
             const menu = document.getElementById('fullMenu');
-            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+            menu.style.display = (menu.style.display === 'grid') ? 'none' : 'grid';
         }
 
         function showSection(sectionId) {
@@ -64,7 +70,7 @@
                 section.style.display = 'none';
             });
             document.getElementById(sectionId).style.display = 'block';
-            // بستن منو بعد از کلیک
+            // بستن منو بعد از انتخاب
             document.getElementById('fullMenu').style.display = 'none';
         }
     </script>
