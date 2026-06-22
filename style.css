@@ -13,15 +13,17 @@ body {
     line-height: 1.9;
 }
 
-/* Navbar */
+/* Navbar - شیشه‌ای حرفه‌ای */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10,10,10,0.98);
-    backdrop-filter: blur(20px);
+    background: rgba(10, 10, 10, 0.65);     /* شفاف‌تر */
+    backdrop-filter: blur(25px);            /* شیشه‌ای قوی */
+    -webkit-backdrop-filter: blur(25px);
     z-index: 1000;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -33,19 +35,28 @@ body {
     align-items: center;
 }
 
-.logo { font-size: 1.75rem; font-weight: 700; color: white; }
+.logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
 
 .menu a {
     color: #ddd;
     text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 10px;
-    transition: all 0.4s;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    background: rgba(255,255,255,0.05);
 }
 
 .menu a:hover, .menu a.active {
-    background: rgba(176,176,176,0.2);
-    color: var(--primary);
+    background: rgba(176, 176, 176, 0.25);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 /* Hero */
