@@ -10,51 +10,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation (همان قبلی) -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">دکتر فرهاد نیکوسرشت</div>
             <div class="menu">
-                <a href="#" onclick="showSection('about')" class="nav-item active">درباره من</a>
-                <a href="#" onclick="showSection('experience')" class="nav-item">سوابق علمی</a>
-                <a href="#" onclick="showSection('internship')" class="nav-item">کارورزی و کارآموزی</a>
-                <a href="#" onclick="showSection('publications')" class="nav-item">مقالات علمی</a>
-                <a href="gallery.html" class="nav-item">گالری عکس</a>
-                <a href="#" onclick="showSection('contact')" class="nav-item">ارتباط با من</a>
+                <!-- آیتم اصلی امکانات سایت -->
+                <a href="#" onclick="toggleMenu()" class="nav-item main-menu">امکانات سایت</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero و بقیه بخش‌ها همان قبلی باقی می‌مانند -->
-
-    <!-- Floating Sidebar Bottom Right -->
-    <div class="floating-sidebar">
-        <h3>خدمات تخصصی</h3>
-        <a href="#" onclick="orderService('تمرین')" class="service-btn">
-            <i class="fas fa-dumbbell"></i>
-            سفارش برنامه تمرین ورزشی
-        </a>
-        <a href="#" onclick="orderService('تغذیه')" class="service-btn">
-            <i class="fas fa-apple-alt"></i>
-            سفارش برنامه تغذیه ورزشی
-        </a>
+    <!-- Full Menu (پنهان تا کلیک شود) -->
+    <div id="fullMenu" class="full-menu">
+        <div class="menu-items">
+            <a href="#" onclick="showSection('about')" class="menu-link">درباره من</a>
+            <a href="#" onclick="showSection('experience')" class="menu-link">سوابق علمی</a>
+            <a href="#" onclick="showSection('internship')" class="menu-link">کارورزی و کارآموزی</a>
+            <a href="#" onclick="showSection('publications')" class="menu-link">مقالات علمی</a>
+            <a href="gallery.html" class="menu-link">گالری عکس</a>
+            <a href="#" onclick="showSection('contact')" class="menu-link">ارتباط با من</a>
+        </div>
     </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>فرهاد نیکوسرشت</h1>
+            <p class="subtitle">دکتری تخصصی (Ph.D) فیزیولوژی ورزشی</p>
+            <p class="desc">استاد دانشگاه • فیزیولوژیست • پژوهشگر • متخصص فیزیولوژی ورزشی</p>
+        </div>
+        <div class="hero-image">
+            <img src="profile.jpg" alt="دکتر فرهاد نیکوسرشت">
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div id="about" class="content-section active"> ... </div>
+    <!-- بقیه بخش‌ها (experience, internship, publications, contact) را همان قبلی نگه دارید -->
 
     <footer>
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
     </footer>
 
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById('fullMenu');
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+        }
+
         function showSection(sectionId) {
             document.querySelectorAll('.content-section').forEach(section => {
                 section.style.display = 'none';
             });
             document.getElementById(sectionId).style.display = 'block';
-        }
-
-        function orderService(type) {
-            alert("در اینستاگرام پیام دهید\n\nبرای دریافت برنامه " + type + " ورزشی با من در ارتباط باشید.");
-            window.open("https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu", "_blank");
+            // بستن منو بعد از کلیک
+            document.getElementById('fullMenu').style.display = 'none';
         }
     </script>
 </body>
