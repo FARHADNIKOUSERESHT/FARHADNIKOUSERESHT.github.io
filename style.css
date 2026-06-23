@@ -256,7 +256,7 @@ transition: transform 0.8s ease;
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 55px;                    /* فاصله بیشتر بین آیتم‌ها */
+    gap: 40px;                   /* فاصله بیشتر بین آیتم‌ها */
     margin-top: 60px;
     padding: 0 15px;
 }
