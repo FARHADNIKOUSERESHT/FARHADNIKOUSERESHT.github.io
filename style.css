@@ -117,6 +117,13 @@ transition: transform 0.8s ease;
     background: rgba(18, 18, 18, 0.68);
     backdrop-filter: blur(30px);
 }
+}
+
+/* مخصوص بخش درباره من (اگر بخواهی فقط این بخش قوی‌تر باشد) */
+#about .container {
+    background: rgba(18, 18, 18, 0.68);
+    backdrop-filter: blur(30px);
+}
 
 .content-section.active { display: block; }
 
