@@ -253,36 +253,21 @@ transition: transform 0.8s ease;
 }
 
 /* آیتم‌های خدمات تخصصی با تصویر زمینه شیشه‌ای */
-/* Grid خدمات تخصصی */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 35px;                    /* فاصله بیشتر بین آیتم‌ها */
-    margin-top: 50px;
-}
-
-/* کارت خدمات - انیمیشن تخصصی و حرفه‌ای */
 .service-card {
     position: relative;
     overflow: hidden;
-    background: rgba(25, 25, 25, 0.75);
+    background: rgba(25, 25, 25, 0.65);
     backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 24px;
-    padding: 40px 30px;
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 22px;
+    padding: 35px 25px;
     text-align: center;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    min-height: 360px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    min-height: 340px;
 }
 
-.service-card:hover {
-    transform: translateY(-18px) scale(1.04);
-    box-shadow: 0 30px 70px rgba(176, 176, 176, 0.25);
-    border-color: #b0b0b0;
-}
-
-/* تصویر زمینه شیشه‌ای */
 .service-card::before {
     content: '';
     position: absolute;
@@ -290,45 +275,27 @@ transition: transform 0.8s ease;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(176,176,176,0.15), rgba(255,200,80,0.12));
-    opacity: 0.6;
+    background: linear-gradient(135deg, 
+                rgba(176, 176, 176, 0.12), 
+                rgba(255, 200, 80, 0.08));
+    opacity: 0.7;
     z-index: 0;
-    transition: all 0.7s ease;
+    transition: all 0.6s ease;
 }
 
 .service-card:hover::before {
-    opacity: 0.9;
-    transform: scale(1.1);
-}
-
-/* نوشته‌های جالب‌تر */
-.service-card h3 {
-    font-size: 1.55rem;
-    margin: 20px 0 15px;
-    color: #f0f0f0;
-    font-weight: 700;
-}
-
-.service-card p {
-    font-size: 1.05rem;
-    color: #ccc;
-    line-height: 1.75;
-    margin-bottom: 25px;
-}
-
-.service-btn {
-    margin-top: auto;
-    padding: 16px 32px;
-    background: rgba(255, 200, 80, 0.9);
-    color: #000;
-    font-weight: 700;
-    border-radius: 50px;
-    transition: all 0.4s ease;
-}
-
-.service-btn:hover {
-    background: #ffcc66;
+    opacity: 0.95;
     transform: scale(1.08);
+}
+
+.service-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 55px rgba(176, 176, 176, 0.25);
 }
 /* گوشی‌های خیلی کوچک */
 @media (max-width: 480px) {
