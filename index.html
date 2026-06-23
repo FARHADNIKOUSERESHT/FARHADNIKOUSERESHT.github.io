@@ -81,21 +81,24 @@
         <p>&copy; ۲۰۲۶ دکتر فرهاد نیکوسرشت - تمامی حقوق محفوظ است.</p>
     </footer>
 
-    <script>
+       <script>
         function showSection(sectionId) {
             document.querySelectorAll('.content-section').forEach(section => {
                 section.style.display = 'none';
-            }
+            });
             document.getElementById(sectionId).style.display = 'block';
         }
-      
+
         function orderService(type) {
             const message = "برای ثبت سفارش در اینستاگرام پیام دهید";
-            if (confirm(message + "\n\nبرای دریافت برنامه " + type + " ورزشی، OK را بزنید")) {
+            
+            if (confirm(message + "\n\nبرای دریافت برنامه " + type + " ورزشی، OK را بزنید تا به اینستاگرام هدایت شوید.")) {
                 window.open("https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu", "_blank");
             }
         }
     </script>
+</body>
+</html>
 </body>
 </aside>
 </html>
