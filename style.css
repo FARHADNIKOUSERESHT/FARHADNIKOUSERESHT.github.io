@@ -312,3 +312,66 @@ transition: transform 0.8s ease;
         font-size: 1.9rem !important;
     }
 }
+/* Responsive بسیار قوی مخصوص گوشی‌های Xiaomi و اندروید */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 15px 5% !important;
+    }
+    
+    .menu {
+        gap: 6px !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .menu a {
+        padding: 8px 12px !important;
+        font-size: 0.93rem !important;
+        white-space: nowrap;
+    }
+    
+    .hero {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 2.5rem !important;
+        padding: 90px 20px 50px !important;
+    }
+    
+    .hero-image img {
+        max-width: 260px !important;
+    }
+    
+    .main-wrapper {
+        flex-direction: column !important;
+        padding: 20px 15px !important;
+    }
+    
+    .special-sidebar {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        left: auto !important;
+        top: auto !important;
+        margin: 30px auto !important;
+    }
+    
+    .container {
+        padding: 30px 20px !important;
+    }
+    
+    .services-grid {
+        gap: 25px !important;
+    }
+}
+
+/* برای گوشی‌های خیلی کوچک مثل برخی مدل‌های Xiaomi */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.7rem !important;
+    }
+    .subtitle {
+        font-size: 1.85rem !important;
+    }
+}
