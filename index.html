@@ -197,43 +197,27 @@
         <button onclick="toggleInternshipForm()" class="internship-btn">
             ثبت درخواست کارورزی و کارآموزی
         </button>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
 
-        <!-- فرم کارورزی (ابتدا مخفی است) -->
-        <div id="internshipForm" class="internship-form" style="display: none; margin-top: 40px;">
-            <form action="https://formspree.io/f/xaqgnrrr" method="POST">
-                <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
-  <input type="text" name="name" placeholder="شماره دانشجویی" required>
-                <input type="email" name="email" placeholder="ایمیل شما" required>
-                <input type="text" name="university" placeholder="دانشگاه و رشته تحصیلی" required>
-                <input type="text" name="period" placeholder=" نام و نام خانوادگی استاد کارورزی یا کارآموزی" required>
-                <input type="text" name="period" placeholder=" نام و نام خانوادگی سرپرست کارورزی یا کارآموزی" required>
-                <input type="text" name="period" placeholder="موضوع کارورزی یا کارآموزی" required>
-                <textarea name="message" rows="5" placeholder="توضیحات کارورزی یا کارآموزی" required></textarea>
-                
-                <button type="submit" class="submit-btn">ارسال درخواست</button>
-            </form>
-        </div>
-    </div>
-</div>
+        function toggleInternshipForm() {
+            const form = document.getElementById('internshipForm');
+            form.style.display = (form.style.display === 'block') ? 'none' : 'block';
+        }
 
-
-        <!-- فرم کارورزی (ابتدا مخفی است) -->
-        <div id="internshipForm" class="internship-form" style="display: none; margin-top: 40px;">
-            <form action="https://formspree.io/f/xaqgnrrr" method="POST">
-                <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
-  <input type="text" name="name" placeholder="شماره دانشجویی" required>
-                <input type="email" name="email" placeholder="ایمیل شما" required>
-                <input type="text" name="university" placeholder="دانشگاه و رشته تحصیلی" required>
-                <input type="text" name="period" placeholder=" نام و نام خانوادگی استاد کارورزی یا کارآموزی" required>
-                <input type="text" name="period" placeholder=" نام و نام خانوادگی سرپرست کارورزی یا کارآموزی" required>
-                <input type="text" name="period" placeholder="موضوع کارورزی یا کارآموزی" required>
-                <textarea name="message" rows="5" placeholder="توضیحات کارورزی یا کارآموزی" required></textarea>
-                
-                <button type="submit" class="submit-btn">ارسال درخواست</button>
-            </form>
-        </div>
-    </div>
-</div>
-
+        function orderService(type) {
+            const message = "برای ثبت سفارش در اینستاگرام پیام دهید";
+            if (confirm(message + "\n\nبرای دریافت برنامه " + type + " ورزشی، OK را بزنید")) {
+                window.open("https://www.instagram.com/farhadnikouseresht?igsh=OXU2dTNqcjk2OWNu", "_blank");
+            }
+        }
+    </script>
+</body>
+</html>
 </body>
 </html>
