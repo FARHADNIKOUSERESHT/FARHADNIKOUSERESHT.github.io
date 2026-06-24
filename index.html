@@ -170,5 +170,33 @@
             }
         }
     </script>
+            <!-- کارورزی و کارآموزی -->
+<div id="internship" class="content-section">
+    <div class="container">
+        <h2>کارورزی و کارآموزی</h2>
+        <p>دانشجویان می‌توانند کارورزی و کارآموزی خود را با دکتر فرهاد نیکوسرشت، انتخاب کنند.</p>
+        
+        <button onclick="toggleInternshipForm()" class="internship-btn">
+            ثبت درخواست کارورزی و کارآموزی
+        </button>
+
+        <!-- فرم کارورزی (ابتدا مخفی است) -->
+        <div id="internshipForm" class="internship-form" style="display: none; margin-top: 40px;">
+            <form action="https://formspree.io/f/xaqgnrrr" method="POST">
+                <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
+  <input type="text" name="name" placeholder="شماره دانشجویی" required>
+                <input type="email" name="email" placeholder="ایمیل شما" required>
+                <input type="text" name="university" placeholder="دانشگاه و رشته تحصیلی" required>
+                <input type="text" name="period" placeholder=" نام و نام خانوادگی استاد کارورزی یا کارآموزی" required>
+                <input type="text" name="period" placeholder=" نام و نام خانوادگی سرپرست کارورزی یا کارآموزی" required>
+                <input type="text" name="period" placeholder="موضوع کارورزی یا کارآموزی" required>
+                <textarea name="message" rows="5" placeholder="توضیحات کارورزی یا کارآموزی" required></textarea>
+                
+                <button type="submit" class="submit-btn">ارسال درخواست</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
