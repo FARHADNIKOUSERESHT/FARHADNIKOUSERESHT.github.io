@@ -197,7 +197,7 @@
         <button onclick="toggleInternshipForm()" class="internship-btn">
             ثبت درخواست کارورزی و کارآموزی
         </button>
-    <script>
+      <script>
         function showSection(sectionId) {
             document.querySelectorAll('.content-section').forEach(section => {
                 section.style.display = 'none';
@@ -205,11 +205,15 @@
             document.getElementById(sectionId).style.display = 'block';
         }
 
+        // تابع نمایش فرم کارورزی
         function toggleInternshipForm() {
             const form = document.getElementById('internshipForm');
-            form.style.display = (form.style.display === 'block') ? 'none' : 'block';
+            if (form) {
+                form.style.display = (form.style.display === 'block') ? 'none' : 'block';
+            }
         }
 
+        // تابع سفارش برنامه‌ها
         function orderService(type) {
             const message = "برای ثبت سفارش در اینستاگرام پیام دهید";
             if (confirm(message + "\n\nبرای دریافت برنامه " + type + " ورزشی، OK را بزنید")) {
@@ -217,7 +221,5 @@
             }
         }
     </script>
-</body>
-</html>
 </body>
 </html>
