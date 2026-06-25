@@ -371,7 +371,6 @@ transition: transform 0.8s ease;
         padding: 30px 20px;
     }
 }
-}
 /* گوشی‌های خیلی کوچک */
 @media (max-width: 480px) {
     .hero-content h1 {
