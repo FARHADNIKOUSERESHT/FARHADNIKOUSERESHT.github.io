@@ -329,42 +329,48 @@ transition: transform 0.8s ease;
 
 /* آیتم‌های خدمات تخصصی با تصویر زمینه شیشه‌ای */
 /* کارت‌های خدمات تخصصی - کوچک‌تر و فشرده‌تر */
+/* خدمات تخصصی - کنار هم مثل سایت تیم حرفه‌ای */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    padding: 0 20px;
+    justify-content: center;
+}
+
 .service-card {
-    position: relative;
-    overflow: hidden;
-    background: rgba(25, 25, 25, 0.75);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 22px;
-    padding: 30px 22px;           /* کوچک‌تر شد */
+    background: rgba(25, 25, 25, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 35px 25px;
     text-align: center;
-    transition: all 0.5s ease;
-    min-height: 300px;            /* ارتفاع کمتر */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service-card:hover {
     transform: translateY(-12px);
-    box-shadow: 0 25px 55px rgba(176, 176, 176, 0.25);
+    box-shadow: 0 20px 45px rgba(176,176,176,0.2);
 }
 
-/* تصویر زمینه شیشه‌ای */
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(176,176,176,0.12), rgba(255,200,80,0.08));
-    opacity: 0.7;
-    z-index: 0;
-    transition: all 0.6s ease;
+/* روی گوشی هم کنار هم بمانند */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .service-card {
+        min-height: 280px;
+        padding: 30px 20px;
+    }
 }
-
-.service-card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 25px 55px rgba(176,176,176,0.25);
 }
 /* گوشی‌های خیلی کوچک */
 @media (max-width: 480px) {
