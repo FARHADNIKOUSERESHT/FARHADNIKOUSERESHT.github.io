@@ -615,3 +615,73 @@ transition: transform 0.8s ease;
         font-size: 0.9rem !important;
     }
 }
+/* رفع مشکل نمایش در گوشی‌های Redmi / Xiaomi */
+@media (max-width: 1024px) {
+    html, body {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    * {
+        box-sizing: border-box !important;
+    }
+    
+    .nav-container {
+        flex-direction: column !important;
+        padding: 12px 5% !important;
+    }
+    
+    .menu {
+        gap: 5px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .hero {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 2rem !important;
+        padding: 80px 15px 40px !important;
+        min-height: auto !important;
+    }
+    
+    .main-wrapper {
+        flex-direction: column !important;
+        padding: 15px !important;
+    }
+    
+    .special-sidebar,
+    .left-advertisement,
+    .services-grid {
+        width: 100% !important;
+        position: relative !important;
+        left: auto !important;
+        margin: 25px auto !important;
+    }
+    
+    .container {
+        padding: 25px 18px !important;
+        margin: 0 10px !important;
+    }
+    
+    .portfolio-grid,
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+}
+
+/* گوشی‌های خیلی کوچک Redmi */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem !important;
+    }
+    .subtitle {
+        font-size: 1.75rem !important;
+    }
+    .menu a {
+        padding: 6px 10px !important;
+        font-size: 0.88rem !important;
+    }
+}
