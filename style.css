@@ -59,53 +59,82 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* Hero - نوشته‌ها بزرگتر و حرفه‌ای */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    gap: 7rem;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
     padding: 0 8%;
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(50,50,50,0.4));
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 650px;
+    z-index: 2;
+    animation: fadeInUp 1.2s ease;
 }
 
 .hero-content h1 {
-    font-size: clamp(4rem, 10vw, 7rem);     /* بزرگتر */
+    font-size: clamp(4.2rem, 11vw, 7.5rem);
     line-height: 1.05;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .subtitle {
-    font-size: 2.7rem;                      /* بزرگتر */
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
     color: #b0b0b0;
-    margin-bottom: 1.4rem;
 }
 
 .desc {
-    font-size: 1.75rem;                     /* بزرگتر */
+    font-size: 1.7rem;
+    margin-bottom: 2.5rem;
     color: #ddd;
-    max-width: 750px;
+}
+
+.hero-btn {
+    padding: 18px 48px;
+    background: #b0b0b0;
+    color: #000;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    transition: all 0.4s;
+}
+
+.hero-btn:hover {
+    background: #ffcc66;
+    transform: scale(1.08);
+}
+
+.hero-image {
+    z-index: 2;
 }
 
 .hero-image img {
-    max-width: 460px;
+    max-width: 420px;
     border-radius: 30px;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.8);
-    transition: transform 0.8s ease;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.85);
 }
 
-/* Main Wrapper */
-.main-wrapper {
-    display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 6%;
-    gap: 40px;
-}
-
-.main-content {
-    flex: 1;
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(60px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* بخش توضیحات - شیشه‌ای حرفه‌ای مثل آیتم‌های دیگر */
