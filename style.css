@@ -768,3 +768,34 @@ transition: transform 0.8s ease;
         display: block !important;
     }
 }
+/* Force Desktop-like View on Xiaomi / Redmi */
+@media (max-width: 1024px) {
+    html {
+        zoom: 0.75;                    /* کوچکتر کردن سایت */
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: top left;
+        transform: scale(0.75);
+        transform-origin: top left;
+        width: 133% !important;
+    }
+    
+    body {
+        min-width: 1366px !important;
+        overflow-x: hidden !important;
+    }
+    
+    .navbar, .hero, .main-wrapper, .container, .services-grid {
+        min-width: 1366px !important;
+    }
+    
+    .special-sidebar {
+        width: 380px !important;
+    }
+}
+
+/* تنظیم اضافی برای گوشی‌های خیلی کوچک */
+@media (max-width: 480px) {
+    html {
+        zoom: 0.68;
+    }
+}
