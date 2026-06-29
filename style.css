@@ -60,21 +60,69 @@ body {
 }
 
 /* Hero */
+/* Hero - شیشه‌ای و حرفه‌ای */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     gap: 7rem;
     padding: 0 8%;
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    background: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.85)), url('hero-bg.jpg'); /* اگر تصویر زمینه داری */
+    background-size: cover;
+    background-position: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    z-index: 0;
+}
+
+.hero-content,
+.hero-image {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: clamp(3.6rem, 9vw, 6.5rem);
+    line-height: 1.05;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.subtitle {
+    font-size: 2.5rem;
+    color: #b0b0b0;
+    margin-bottom: 1.4rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.desc {
+    font-size: 1.6rem;
+    color: #ddd;
+    max-width: 720px;
+}
+
+/* عکس پروفایل */
 .hero-image img {
-    max-width: 460px;
-    border-radius: 30px;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.8);
-transition: transform 0.8s ease;
+    max-width: 420px;
+    border-radius: 28px;
+    box-shadow: 0 35px 70px rgba(0,0,0,0.85);
+    transition: transform 0.8s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.07);
 }
 
 /* Main Wrapper */
