@@ -1,3 +1,4 @@
+
 :root {
     --primary: #b0b0b0;
     --dark: #0a0a0a;
@@ -59,46 +60,35 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* Hero - تنظیم برای گوشی */
+/* Hero */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    gap: 4rem;
-    padding: 0 5%;
-    background: linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.9));
+    gap: 7rem;
+    padding: 0 8%;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
     flex-wrap: wrap;
-    text-align: center;
-}
-
-.hero-content {
-    flex: 1;
-    min-width: 300px;
-}
-
-.hero-content h1 {
-    font-size: 2.8rem;
-}
-
-.subtitle {
-    font-size: 1.9rem;
-}
-
-.desc {
-    font-size: 1.25rem;
 }
 
 .hero-image img {
-    max-width: 280px;
+    max-width: 460px;
+    border-radius: 30px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.8);
+transition: transform 0.8s ease;
 }
 
-/* Responsive قوی برای گوشی */
-@media (max-width: 1024px) {
-    .hero {
-        min-width: 1280px !important;
-        padding: 0 5% !important;
-        gap: 5rem !important;
-    }
+/* Main Wrapper */
+.main-wrapper {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 6%;
+    gap: 40px;
+}
+
+.main-content {
+    flex: 1;
 }
 
 /* بخش توضیحات - شیشه‌ای حرفه‌ای مثل آیتم‌های دیگر */
@@ -777,130 +767,5 @@ body {
         width: 100% !important;
         margin: 15px auto !important;
         display: block !important;
-    }
-}
-/* Force Desktop-like View on Xiaomi / Redmi */
-@media (max-width: 1024px) {
-    html {
-        zoom: 0.75;                    /* کوچکتر کردن سایت */
-        -moz-transform: scale(0.75);
-        -moz-transform-origin: top left;
-        transform: scale(0.75);
-        transform-origin: top left;
-        width: 133% !important;
-    }
-    
-    body {
-        min-width: 1366px !important;
-        overflow-x: hidden !important;
-    }
-    
-    .navbar, .hero, .main-wrapper, .container, .services-grid {
-        min-width: 1366px !important;
-    }
-    
-    .special-sidebar {
-        width: 380px !important;
-    }
-}
-
-/* تنظیم اضافی برای گوشی‌های خیلی کوچک */
-@media (max-width: 480px) {
-    html {
-        zoom: 0.68;
-    }
-}
-/* تنظیم پهنای سایت مثل لپ‌تاپ روی گوشی */
-body, html {
-    min-width: 1280px !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-}
-
-/* Force Desktop Layout on Mobile */
-@media (max-width: 1024px) {
-    .main-wrapper,
-    .hero,
-    .container,
-    .services-grid,
-    .navbar {
-        min-width: 1280px !important;
-        width: 1280px !important;
-        margin: 0 auto !important;
-    }
-    
-    .special-sidebar {
-        width: 360px !important;
-    }
-    
-    /* رفع بهم‌ریختگی */
-    .menu {
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        padding-bottom: 10px;
-    }
-    
-    .hero {
-        flex-direction: row !important;
-        gap: 5rem !important;
-    }
-}
-
-/* تنظیم برای گوشی‌های کوچک */
-@media (max-width: 768px) {
-    body, html {
-        min-width: 1200px !important;
-    }
-}
-/* تنظیم پهنای سایت در گوشی - جلوگیری از پهن بودن زیاد */
-@media (max-width: 1024px) {
-    body, html {
-        min-width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-    }
-    
-    .main-wrapper,
-    .hero,
-    .container,
-    .services-grid,
-    .navbar {
-        width: 100% !important;
-        min-width: auto !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        margin: 0 auto !important;
-    }
-    
-    .special-sidebar {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-}
-
-/* تنظیم اضافی برای گوشی‌های کوچک */
-@media (max-width: 768px) {
-    .hero {
-        padding: 80px 15px 50px !important;
-    }
-}
-/* اندازه آیتم‌های خدمات تخصصی در گوشی */
-@media (max-width: 768px) {
-    .service-card {
-        min-height: 280px !important;
-        padding: 25px 20px !important;
-    }
-    
-    .service-card h3 {
-        font-size: 1.35rem !important;
-    }
-    
-    .service-card p {
-        font-size: 0.98rem !important;
-    }
-    
-    .service-btn {
-        padding: 12px 25px !important;
-        font-size: 1rem !important;
     }
 }
