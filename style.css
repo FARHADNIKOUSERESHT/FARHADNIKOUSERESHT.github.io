@@ -768,29 +768,3 @@ transition: transform 0.8s ease;
         display: block !important;
     }
 }
-/* Force smaller view on Redmi / Xiaomi phones (شبیه لپ‌تاپ) */
-@media (max-width: 1024px) {
-    html {
-        zoom: 0.78;                    /* کوچکتر کردن سایت */
-        -moz-transform: scale(0.78);
-        -moz-transform-origin: top left;
-        transform: scale(0.78);
-        transform-origin: top left;
-        width: 128% !important;        /* جبران زوم */
-    }
-    
-    body {
-        min-width: 1980px !important;  /* حداقل عرض دسکتاپ */
-    }
-    
-    .navbar, .hero, .main-wrapper {
-        min-width: 1280px !important;
-    }
-}
-
-/* تنظیم اضافی برای گوشی‌های خیلی کوچک */
-@media (max-width: 480px) {
-    html {
-        zoom: 0.72;
-    }
-}
