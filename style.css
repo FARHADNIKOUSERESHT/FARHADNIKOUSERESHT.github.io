@@ -58,19 +58,19 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
-
-/* Hero - شیشه‌ای و حرفه‌ای */
+/* Hero - گرافیکی و انیمیشنی حرفه‌ای */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    gap: 7rem;
+    gap: 8rem;
     padding: 0 8%;
     background: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.85)), url('hero-bg.jpg'); /* اگر تصویر زمینه داری */
     background-size: cover;
     background-position: center;
     flex-wrap: wrap;
     position: relative;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -80,9 +80,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(20, 20, 20, 0.4);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(15px);
     z-index: 0;
 }
 
@@ -90,38 +89,44 @@ body {
 .hero-image {
     position: relative;
     z-index: 1;
+    animation: fadeUp 1.2s ease forwards;
 }
 
 .hero-content h1 {
-    font-size: clamp(3.6rem, 9vw, 6.5rem);
+    font-size: clamp(3.8rem, 10vw, 6.8rem);
     line-height: 1.05;
-    margin-bottom: 1.2rem;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    margin-bottom: 1rem;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.7);
 }
 
 .subtitle {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     color: #b0b0b0;
     margin-bottom: 1.4rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 0 3px 12px rgba(0,0,0,0.6);
 }
 
 .desc {
-    font-size: 1.6rem;
+    font-size: 1.65rem;
     color: #ddd;
     max-width: 720px;
 }
 
-/* عکس پروفایل */
 .hero-image img {
     max-width: 420px;
     border-radius: 28px;
-    box-shadow: 0 35px 70px rgba(0,0,0,0.85);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.85);
     transition: transform 0.8s ease;
 }
 
 .hero-image img:hover {
-    transform: scale(1.07);
+    transform: scale(1.08);
+}
+
+/* انیمیشن ورود */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(60px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Main Wrapper */
