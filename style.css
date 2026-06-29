@@ -768,3 +768,64 @@ transition: transform 0.8s ease;
         display: block !important;
     }
 }
+/* Force Desktop-like View on Mobile (Xiaomi / Redmi) */
+@media (max-width: 1024px) {
+    html, body {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        zoom: 0.85; /* شبیه‌سازی نمایش دسکتاپ */
+    }
+    
+    .nav-container {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        padding: 1rem 8% !important;
+    }
+    
+    .menu {
+        gap: 12px !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-end !important;
+    }
+    
+    .hero {
+        flex-direction: row !important;
+        text-align: left !important;
+        gap: 5rem !important;
+        padding: 0 8% !important;
+        min-height: 85vh !important;
+    }
+    
+    .main-wrapper {
+        flex-direction: row !important;
+        padding: 30px 8% !important;
+    }
+    
+    .special-sidebar,
+    .left-advertisement {
+        width: 320px !important;
+        position: sticky !important;
+        top: 120px !important;
+        align-self: start !important;
+    }
+    
+    .container {
+        padding: 45px 35px !important;
+    }
+    
+    .services-grid,
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+        gap: 25px !important;
+    }
+}
+
+/* تنظیمات اضافی برای Redmi */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px !important;
+    }
+    .hero-content h1 {
+        font-size: 3.2rem !important;
+    }
+}
