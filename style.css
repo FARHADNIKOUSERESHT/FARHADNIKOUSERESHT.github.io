@@ -58,75 +58,23 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
-/* Hero - گرافیکی و انیمیشنی حرفه‌ای */
+
+/* Hero */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    gap: 8rem;
+    gap: 7rem;
     padding: 0 8%;
-    background: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.85)), url('hero-bg.jpg'); /* اگر تصویر زمینه داری */
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
     flex-wrap: wrap;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(15px);
-    z-index: 0;
-}
-
-.hero-content,
-.hero-image {
-    position: relative;
-    z-index: 1;
-    animation: fadeUp 1.2s ease forwards;
-}
-
-.hero-content h1 {
-    font-size: clamp(3.8rem, 10vw, 6.8rem);
-    line-height: 1.05;
-    margin-bottom: 1rem;
-    text-shadow: 0 5px 20px rgba(0,0,0,0.7);
-}
-
-.subtitle {
-    font-size: 2.6rem;
-    color: #b0b0b0;
-    margin-bottom: 1.4rem;
-    text-shadow: 0 3px 12px rgba(0,0,0,0.6);
-}
-
-.desc {
-    font-size: 1.65rem;
-    color: #ddd;
-    max-width: 720px;
 }
 
 .hero-image img {
-    max-width: 420px;
-    border-radius: 28px;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.85);
-    transition: transform 0.8s ease;
-}
-
-.hero-image img:hover {
-    transform: scale(1.08);
-}
-
-/* انیمیشن ورود */
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(60px); }
-    to { opacity: 1; transform: translateY(0); }
+    max-width: 460px;
+    border-radius: 30px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.8);
+transition: transform 0.8s ease;
 }
 
 /* Main Wrapper */
@@ -818,66 +766,5 @@ body {
         width: 100% !important;
         margin: 15px auto !important;
         display: block !important;
-    }
-}
-/* Force Desktop-like View on Mobile (Xiaomi / Redmi) */
-@media (max-width: 1024px) {
-    html, body {
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-        zoom: 0.85; /* شبیه‌سازی نمایش دسکتاپ */
-    }
-    
-    .nav-container {
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        padding: 1rem 8% !important;
-    }
-    
-    .menu {
-        gap: 12px !important;
-        flex-wrap: nowrap !important;
-        justify-content: flex-end !important;
-    }
-    
-    .hero {
-        flex-direction: row !important;
-        text-align: left !important;
-        gap: 5rem !important;
-        padding: 0 8% !important;
-        min-height: 85vh !important;
-    }
-    
-    .main-wrapper {
-        flex-direction: row !important;
-        padding: 30px 8% !important;
-    }
-    
-    .special-sidebar,
-    .left-advertisement {
-        width: 320px !important;
-        position: sticky !important;
-        top: 120px !important;
-        align-self: start !important;
-    }
-    
-    .container {
-        padding: 45px 35px !important;
-    }
-    
-    .services-grid,
-    .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-        gap: 25px !important;
-    }
-}
-
-/* تنظیمات اضافی برای Redmi */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px !important;
-    }
-    .hero-content h1 {
-        font-size: 3.2rem !important;
     }
 }
