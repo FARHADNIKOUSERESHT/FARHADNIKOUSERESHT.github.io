@@ -799,3 +799,31 @@ transition: transform 0.8s ease;
         zoom: 0.68;
     }
 }
+/* تنظیم پهنای سایت در گوشی (شبیه لپ‌تاپ) */
+body, html {
+    min-width: 1280px !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+}
+
+@media (max-width: 1024px) {
+    .main-wrapper,
+    .hero,
+    .container,
+    .services-grid {
+        min-width: 1280px !important;
+        width: 1280px !important;
+        margin: 0 auto !important;
+    }
+    
+    .navbar {
+        min-width: 1280px !important;
+    }
+}
+
+/* تنظیم اضافی برای گوشی‌های کوچک */
+@media (max-width: 768px) {
+    body, html {
+        min-width: 1100px !important;
+    }
+}
