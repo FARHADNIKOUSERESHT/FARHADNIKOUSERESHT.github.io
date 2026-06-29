@@ -59,35 +59,53 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* Hero */
+/* Hero - نمایش مثل لپ‌تاپ در گوشی */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    gap: 7rem;
+    gap: 8rem;
     padding: 0 8%;
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    background: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.85));
     flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    min-width: 1280px !important;   /* مثل لپ‌تاپ */
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: clamp(4rem, 9vw, 7rem);
+    line-height: 1.05;
+}
+
+.subtitle {
+    font-size: 2.6rem;
+    color: #b0b0b0;
+}
+
+.desc {
+    font-size: 1.65rem;
+    color: #ddd;
 }
 
 .hero-image img {
-    max-width: 460px;
-    border-radius: 30px;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.8);
-transition: transform 0.8s ease;
+    max-width: 420px;
+    border-radius: 28px;
+    box-shadow: 0 35px 70px rgba(0,0,0,0.85);
 }
 
-/* Main Wrapper */
-.main-wrapper {
-    display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 6%;
-    gap: 40px;
-}
-
-.main-content {
-    flex: 1;
+/* Responsive قوی برای گوشی */
+@media (max-width: 1024px) {
+    .hero {
+        min-width: 1280px !important;
+        padding: 0 5% !important;
+        gap: 5rem !important;
+    }
 }
 
 /* بخش توضیحات - شیشه‌ای حرفه‌ای مثل آیتم‌های دیگر */
