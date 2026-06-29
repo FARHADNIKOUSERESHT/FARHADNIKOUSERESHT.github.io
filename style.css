@@ -799,31 +799,45 @@ transition: transform 0.8s ease;
         zoom: 0.68;
     }
 }
-/* تنظیم پهنای سایت در گوشی (شبیه لپ‌تاپ) */
+/* تنظیم پهنای سایت مثل لپ‌تاپ روی گوشی */
 body, html {
     min-width: 1280px !important;
     max-width: 100% !important;
     overflow-x: auto !important;
 }
 
+/* Force Desktop Layout on Mobile */
 @media (max-width: 1024px) {
     .main-wrapper,
     .hero,
     .container,
-    .services-grid {
+    .services-grid,
+    .navbar {
         min-width: 1280px !important;
         width: 1280px !important;
         margin: 0 auto !important;
     }
     
-    .navbar {
-        min-width: 1280px !important;
+    .special-sidebar {
+        width: 360px !important;
+    }
+    
+    /* رفع بهم‌ریختگی */
+    .menu {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        padding-bottom: 10px;
+    }
+    
+    .hero {
+        flex-direction: row !important;
+        gap: 5rem !important;
     }
 }
 
-/* تنظیم اضافی برای گوشی‌های کوچک */
+/* تنظیم برای گوشی‌های کوچک */
 @media (max-width: 768px) {
     body, html {
-        min-width: 1100px !important;
+        min-width: 1200px !important;
     }
 }
