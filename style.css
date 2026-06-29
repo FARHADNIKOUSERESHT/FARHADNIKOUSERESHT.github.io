@@ -780,7 +780,7 @@ transition: transform 0.8s ease;
     }
     
     body {
-        min-width: 1280px !important;  /* حداقل عرض دسکتاپ */
+        min-width: 1980px !important;  /* حداقل عرض دسکتاپ */
     }
     
     .navbar, .hero, .main-wrapper {
