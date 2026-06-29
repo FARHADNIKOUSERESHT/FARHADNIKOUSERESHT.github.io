@@ -859,3 +859,35 @@ body, html {
         min-width: 1200px !important;
     }
 }
+/* تنظیم پهنای سایت در گوشی - جلوگیری از پهن بودن زیاد */
+@media (max-width: 1024px) {
+    body, html {
+        min-width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    .main-wrapper,
+    .hero,
+    .container,
+    .services-grid,
+    .navbar {
+        width: 100% !important;
+        min-width: auto !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin: 0 auto !important;
+    }
+    
+    .special-sidebar {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* تنظیم اضافی برای گوشی‌های کوچک */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 15px 50px !important;
+    }
+}
