@@ -804,3 +804,39 @@ transition: transform 0.8s ease;
     background: rgba(176, 176, 176, 0.2);
     color: #b0b0b0;
 }
+/* Dropdown برای جزوه دروس */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(20, 20, 20, 0.98);
+    min-width: 240px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+    border-radius: 12px;
+    top: 100%;
+    right: 0;
+    z-index: 1001;
+    padding: 10px 0;
+    border: 1px solid #444;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #ddd;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+}
+
+.dropdown-content a:hover {
+    background: rgba(176, 176, 176, 0.2);
+    color: #b0b0b0;
+}
